@@ -1,5 +1,5 @@
 import React from 'react'
-import { CiLocationOn, CiStar } from 'react-icons/ci'
+import useFetch from '../../hook/useFetch'
 
 function HotelsList() {
     return (
