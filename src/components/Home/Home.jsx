@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { HiCalendar, HiLocationMarker, HiMinus, HiPlus, HiSearch } from 'react-icons/hi'
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
+import { DateRange } from 'react-date-range';
+import { format } from 'date-fns';
 
 function Home() {
     const [small, setSmall] = useState(false);
@@ -60,6 +64,12 @@ function HeaderSearch() {
         Children: 0,
         Room: 1
     });
+    const [date, setDate] = useState([{
+        startDate: new Date(),
+        endDate: new Date(),
+        key: 'selection',
+    }]);
+    const [isDateOpen, setIsDateOpen] = useState(false)
     const handleactions = (type, operator) => {
         if (operator === 'inc') {
             setOptions(prev => {
@@ -87,10 +97,21 @@ function HeaderSearch() {
                 </div>
                 <div className="headerSearchItem">
                     <label>Date :</label>
-                    <div id="dropDownDate">
-                        2020/12/4
+                    <div
+                        id="dropDownDate"
+                        onClick={() => setIsDateOpen(is => !is)}
+                    >
+                        {`${format(date[0].startDate, 'MM,dd,yy')} To ${format(date[0].endDate, 'MM,dd,yy')}`}
                     </div>
                     <HiCalendar className='icon iconCalender' />
+                    {isDateOpen &&
+                        <DateRange
+                            className='date'
+                            ranges={date}
+                            onChange={item => setDate([item.selection])}
+                            minDate={new Date()}
+                            moveRangeOnFirstSelection={true}
+                        />}
                 </div>
                 <div className="headerSearchItem">
                     <label>Options :</label>
