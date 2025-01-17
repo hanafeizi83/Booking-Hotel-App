@@ -2,6 +2,7 @@
     --bgColor:#F5F7FB;
     --white: #FFF;
     --black: #000;
+    --gray-100: #e3e3e3;
     --gray-300: #b7b4b4;
     --gray-500: #a3a1a1;
     --red: #f43f5e;
@@ -45,4 +46,8 @@
   
   .icon {
     position: absolute;
+  }
+
+  :disabled{
+    cursor: no-drop;
   }

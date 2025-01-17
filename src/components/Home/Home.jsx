@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { HiCalendar, HiLocationMarker, HiSearch } from 'react-icons/hi'
+import { HiCalendar, HiLocationMarker, HiMinus, HiPlus, HiSearch } from 'react-icons/hi'
 
 function Home() {
     const [small, setSmall] = useState(false);
@@ -53,12 +53,36 @@ function Home() {
 export default Home
 
 function HeaderSearch() {
+    const [destination, setDestination] = useState('');
+    const [isOptinsOpen, setIsOptionsOpen] = useState(false);
+    const [options, setOptions] = useState({
+        Guests: 1,
+        Children: 0,
+        Room: 1
+    });
+    const handleactions = (type, operator) => {
+        if (operator === 'inc') {
+            setOptions(prev => {
+                return {
+                    ...prev,
+                    [type]: options[type] + 1
+                }
+            })
+        }
+    }
     return (
         <>
             <div className="headerSearchContainer">
                 <div className="headerSearchItem">
                     <label htmlFor="destination">Destination :</label>
-                    <input type="text" name='destination' id='destination' placeholder='whre do you go ?' />
+                    <input
+                        type="text"
+                        name='destination'
+                        id='destination'
+                        placeholder='whre do you go ?'
+                        value={destination}
+                        onChange={(e) => setDestination(e.target.value)}
+                    />
                     <HiLocationMarker className='icon iconLocation' />
                 </div>
                 <div className="headerSearchItem">
@@ -70,7 +94,11 @@ function HeaderSearch() {
                 </div>
                 <div className="headerSearchItem">
                     <label>Options :</label>
-                    <div id='dropDownOptins'>1 adult &bull; 2 children &bull; 1 room</div>
+                    {isOptinsOpen && <HeaderSearchOptions options={options} handleactions={handleactions} />}
+                    <div
+                        id='dropDownOptins'
+                        onClick={() => setIsOptionsOpen(is => !is)}
+                    >1 adult &bull; 2 children &bull; 1 room</div>
                 </div>
                 <button className='btn btnSearchHeader'>
                     <HiSearch className='searchicon' />
@@ -79,3 +107,38 @@ function HeaderSearch() {
         </>
     )
 }
+
+function HeaderSearchOptions({ options, handleactions }) {
+    return (
+        <div className="headerSearchOptions">
+            <OptionsItem type='Guests' options={options} minLimit={1} handleactions={handleactions} />
+            <OptionsItem type='Children' options={options} minLimit={0} handleactions={handleactions} />
+            <OptionsItem type='Room' options={options} minLimit={1} handleactions={handleactions} />
+        </div>
+    )
+}
+
+function OptionsItem({ type, options, minLimit, handleactions }) {
+    return (
+        <div className="searchOptionsItem">
+            <p>{type}</p>
+            <div className="optionsCounter">
+                <button
+                    className='btn btnCounter'
+                    onClick={() => handleactions(type, 'dec')}
+                    disabled={options[type] <= minLimit}
+                >
+                    <HiMinus />
+                </button>
+                <span>{options[type]}</span>
+                <button
+                    className='btn btnCounter'
+                    onClick={() => handleactions(type, 'inc')}
+                >
+                    <HiPlus />
+                </button>
+            </div>
+        </div>
+    )
+}
+

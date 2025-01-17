@@ -135,7 +135,7 @@
   font-size: .9rem;
 }
 
-.headerSearchItem div {
+.headerSearchItem>div {
   margin-left: 1rem;
   font-size: .8rem;
   margin-top: .3rem;
@@ -232,4 +232,42 @@
   color: var(--gray-300);
   font-size: .8rem;
   margin-right: .5rem;
+}
+
+/* header search options */
+.headerSearchOptions {
+  background-color: var(--white);
+  border-radius: 5px;
+  position: absolute;
+  width: 12rem;
+  bottom: -9rem;
+  left: -1rem;
+}
+
+.searchOptionsItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .1rem .6rem;
+}
+
+.optionsCounter {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.counterIcon {
+  background-color: var(--gray-100);
+  font-size: .7rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 3px;
+}
+.btnCounter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
 }
