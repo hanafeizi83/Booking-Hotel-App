@@ -2,62 +2,32 @@ import React from 'react'
 import useFetch from '../../hook/useFetch'
 
 function HotelsList() {
+    const { data, isLoading } = useFetch();
+    console.log(data);
+
     return (
         <div>
             <div className="container">
                 <div className='hotelsList'>
-                    <div className="hotelItem">
-                        <img src="/images/hote_1.jpg" alt="hotel_1" className='hotelImage' />
-                        <div className="hotelDesc">
-                            <div className="hotelDetails">
-                                <h2>Dummy Title Here</h2>
-                                <p>6 guests | 2 bedrooms</p>
+                    {
+                        data.map(hotel => {
+                            return <div key={hotel.id} className="hotelItem">
+                                <img src={hotel.picture_url.url} alt={hotel.name} className='hotelImage' />
+                                <div className="hotelDesc">
+                                    <div className="hotelDetails">
+                                        <h2>{hotel.name}</h2>
+                                        <p>{hotel.guests} guests | {hotel.accommodates} rooms</p>
+                                    </div>
+                                    <div className="hotelPrice">
+                                        <p>From</p>
+                                        <h2>$ {hotel.price}</h2>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="hotelPrice">
-                                <p>From</p>
-                                <h2>$100</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hotelItem">
-                        <img src="/images/hote_1.jpg" alt="hotel_1" className='hotelImage' />
-                        <div className="hotelDesc">
-                            <div className="hotelDetails">
-                                <h2>Dummy Title Here</h2>
-                                <p>6 guests | 2 bedrooms</p>
-                            </div>
-                            <div className="hotelPrice">
-                                <p>From</p>
-                                <h2>$100</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hotelItem">
-                        <img src="/images/hote_1.jpg" alt="hotel_1" className='hotelImage' />
-                        <div className="hotelDesc">
-                            <div className="hotelDetails">
-                                <h2>Dummy Title Here</h2>
-                                <p>6 guests | 2 bedrooms</p>
-                            </div>
-                            <div className="hotelPrice">
-                                <p>From</p>
-                                <h2>$100</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="hotelItem">
-                        <img src="/images/hote_1.jpg" alt="hotel_1" className='hotelImage' />
-                        <div className="hotelDesc">
-                            <div className="hotelDetails">
-                                <h2>Dummy Title Here</h2>
-                                <p>6 guests | 2 bedrooms</p>
-                            </div>
-                            <div className="hotelPrice">
-                                <p>From</p>
-                                <h2>$100</h2>
-                            </div>
-                        </div>
-                    </div>
+                        })
+                    }
+
+
                 </div>
             </div>
         </div>

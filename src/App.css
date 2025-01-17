@@ -1,232 +1,235 @@
 .header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    transition: all .3s ease-in;
-  }
-  .headerBackground{
-    background-color: var(--bgColor);
-  }
-  .headerKeeper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    height: 3rem;
-    justify-content: space-between;
-  }
-  
-  .logoAndMenuContainer {
-    display: flex;
-    width: 60%;
-    align-items: center;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo h2 {
-    margin: 0;
-    font-family: 'NCLBlovey'
-  }
-  
-  .logo img {
-    width: 4rem;
-    height: 3rem;
-  }
-  
-  .menu {
-    display: flex;
-    align-items: center;
-    width: 35%;
-    margin: 0;
-    justify-content: space-between;
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-  }
-  
-  .btnSingIn {
-    background-color: var(--blue);
-    color: var(--white);
-    padding: .5rem 1.5rem;
-    border-radius: .5rem;
-  }
-  
-  .btnSingUp {
-    padding: .5rem 1rem;
-    border-radius: .5rem;
-    border: 1px solid var(--blue);
-    background-color: transparent;
-    margin-left: .5rem;
-  }
-  
-  
-  .headerCotain {
-    background-image: url('../public/images/bg.jpg');
-    width: 100%;
-    height: 20rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 2rem;
-    margin-top: 3.3rem;
-    background-position: left bottom;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .headerCotain h2 {
-    color: var(--white);
-    margin: 0;
-  }
-  
-  .headerCotain p {
-    color: var(--gray);
-    text-align: center;
-  }
-  
-  /* SearchHeader */
-  .headerSearchContainer {
-    position: absolute;
-    background-color: var(--white);
-    border-radius: 40px;
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 21rem;
-    z-index: 999;
-    height: 4rem;
-    left: 16rem;
-    padding: 0 1rem;
-    box-shadow: 0px -3px 18px 0px rgba(0, 0, 0, 0.75);
-  }
-  
-  .headerSearchItem {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  
-  .headerSearchItem input {
-    height: 1.4rem;
-    margin-left: .3rem;
-  }
-  
-  .headerSearchItem label:first-child {
-    margin-bottom: 0;
-  }
-  
-  .headerSearchItem label {
-    margin-bottom: .5rem;
-    font-weight: 600;
-    font-size: .9rem;
-  }
-  
-  .headerSearchItem div {
-    margin-left: 1rem;
-    font-size: .8rem;
-    margin-top: .3rem;
-  }
-  
-  .headerSearchItem div:last-child {
-    margin-left: 0;
-  }
-  
-  #destination {
-    border-radius: .5rem;
-    padding-left: 1rem;
-  }
-  
-  .iconLocation {
-    color: var(--red);
-    top: 1.3rem;
-  }
-  
-  .iconCalender {
-    top: 1.3rem;
-    color: var(--purple);
-  }
-  
-  .iconOption {
-    color: var(--green);
-  }
-  
-  .btnSearchHeader {
-    background-color: var(--blue);
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .searchicon {
-    color: var(--white);
-    font-size: 1.5rem;
-  }
-  
-  /* hotel List */
-  .hotelsList {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 4rem;
-  }
-  
-  .hotelItem {
-    background-color: var(--white);
-    width: 30%;
-    border-radius: 12px;
-    padding: .5rem;
-    margin-bottom: 1rem;
-    box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.20);
-  }
-  
-  .hotelImage {
-    width: 100%;
-    height: 13rem;
-    border-radius: 10px;
-  }
-  
-  .hotelDesc {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .hotelDetails h2 {
-    font-size: 1rem;
-    margin: 0;
-    margin-bottom: .5rem;
-    font-family: 'Bollerouy';
-  }
-  
-  .hotelDetails p {
-    font-size: .8rem;
-    margin: 0;
-    color: var(--gray-500);
-  }
-  
-  .hotelPrice {
-    display: flex;
-    align-items: center;
-  }
-  
-  .hotelPrice p {
-    color: var(--gray-300);
-    font-size: .8rem;
-    margin-right: .5rem;
-  }
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  transition: all .3s ease-in;
+}
+
+.headerBackground {
+  background-color: var(--bgColor);
+}
+
+.headerKeeper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  height: 3rem;
+  justify-content: space-between;
+}
+
+.logoAndMenuContainer {
+  display: flex;
+  width: 60%;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h2 {
+  margin: 0;
+  font-family: 'NCLBlovey'
+}
+
+.logo img {
+  width: 4rem;
+  height: 3rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  width: 35%;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.menu ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+
+.btnSingIn {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: .5rem 1.5rem;
+  border-radius: .5rem;
+}
+
+.btnSingUp {
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: 1px solid var(--blue);
+  background-color: transparent;
+  margin-left: .5rem;
+}
+
+
+.headerCotain {
+  background-image: url('../public/images/bg.jpg');
+  width: 100%;
+  height: 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+  margin-top: 3.3rem;
+  background-position: left bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerCotain h2 {
+  color: var(--white);
+  margin: 0;
+}
+
+.headerCotain p {
+  color: var(--gray);
+  text-align: center;
+}
+
+/* SearchHeader */
+.headerSearchContainer {
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 40px;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 21rem;
+  z-index: 999;
+  height: 4rem;
+  left: 16rem;
+  padding: 0 1rem;
+  box-shadow: 0px -3px 18px 0px rgba(0, 0, 0, 0.75);
+}
+
+.headerSearchItem {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.headerSearchItem input {
+  height: 1.4rem;
+  margin-left: .3rem;
+}
+
+.headerSearchItem label:first-child {
+  margin-bottom: 0;
+}
+
+.headerSearchItem label {
+  margin-bottom: .5rem;
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.headerSearchItem div {
+  margin-left: 1rem;
+  font-size: .8rem;
+  margin-top: .3rem;
+}
+
+.headerSearchItem div:last-child {
+  margin-left: 0;
+}
+
+#destination {
+  border-radius: .5rem;
+  padding-left: 1rem;
+}
+
+.iconLocation {
+  color: var(--red);
+  top: 1.3rem;
+}
+
+.iconCalender {
+  top: 1.3rem;
+  color: var(--purple);
+}
+
+.iconOption {
+  color: var(--green);
+}
+
+.btnSearchHeader {
+  background-color: var(--blue);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchicon {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+/* hotel List */
+.hotelsList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.hotelItem {
+  background-color: var(--white);
+  width: 30%;
+  border-radius: 12px;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.20);
+}
+
+.hotelImage {
+  width: 100%;
+  height: 13rem;
+  border-radius: 10px;
+}
+
+.hotelDesc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hotelDetails h2 {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: .5rem;
+  font-family: 'Bollerouy';
+}
+
+.hotelDetails p {
+  font-size: .8rem;
+  margin: 0;
+  color: var(--gray-500);
+}
+
+.hotelPrice {
+  display: flex;
+  align-items: center;
+  width: 35%;
+}
+
+.hotelPrice p {
+  color: var(--gray-300);
+  font-size: .8rem;
+  margin-right: .5rem;
+}
