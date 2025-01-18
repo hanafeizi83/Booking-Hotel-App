@@ -1,8 +1,8 @@
 import React from 'react'
 import useFetch from '../../hook/useFetch'
 
-function HotelsList() {
-    const { data, isLoading } = useFetch();
+function HotelsHomeList() {
+    const { data, isLoading } = useFetch('http://localhost:5000/hotels');
     return (
         <div>
             <div className="container">
@@ -32,4 +32,4 @@ function HotelsList() {
     )
 }
 
-export default HotelsList
+export default HotelsHomeList

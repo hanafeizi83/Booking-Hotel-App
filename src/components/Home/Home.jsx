@@ -1,45 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { HiCalendar, HiLocationMarker, HiMinus, HiPlus, HiSearch } from 'react-icons/hi'
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
 import useOutsideClick from '../../hook/useOutsideClick';
+import HotelsHomeList from '../HotelsHomeList/HotelsHomeList';
 
 function Home() {
-    const [small, setSmall] = useState(false);
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            window.addEventListener("scroll", () =>
-                setSmall(window.pageYOffset > 120)
-            );
-        }
-    }, []);
-
     return (
         <>
-            <header className={`header ${small ? 'headerBackground' : ''}`} >
-                <div className="container">
-                    <div className="headerKeeper">
-                        <div className="logo">
-                            <img src="images/logo.png" alt="Hotel Logo" />
-                            <h2>Serenity Hotel</h2>
-                        </div>
-                        <nav className='menu'>
-                            <ul>
-                                <li>Home</li>
-                                <li>Hotels</li>
-                                <li>Bookmarks</li>
-                            </ul>
-                        </nav>
-                        <div>
-                            <button className='btn btnSingIn'>Sign in</button>
-                            <button className='btn btnSingUp'>Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </header>
             <div>
                 <div className="container">
                     <div className="headerCotain">
@@ -50,6 +20,7 @@ function Home() {
                     </div>
                     <HeaderSearch />
                 </div>
+                <HotelsHomeList />
             </div>
         </>
     )
@@ -81,6 +52,12 @@ function HeaderSearch() {
             })
         }
     }
+
+
+    const handleSearch = () => {
+
+    }
+
     return (
         <>
             <div className="headerSearchContainer">
@@ -123,7 +100,7 @@ function HeaderSearch() {
 
                     >1 adult &bull; 2 children &bull; 1 room</div>
                 </div>
-                <button className='btn btnSearchHeader'>
+                <button className='btn btnSearchHeader' onClick={handleSearch}>
                     <HiSearch className='searchicon' />
                 </button>
             </div>
@@ -133,7 +110,7 @@ function HeaderSearch() {
 
 function HeaderSearchOptions({ options, handleactions, setIsOptionsOpen }) {
     const optionsRef = useRef()
-    useOutsideClick(optionsRef, 'dropDownOptins',() => setIsOptionsOpen(false))
+    useOutsideClick(optionsRef, 'dropDownOptins', () => setIsOptionsOpen(false))
     return (
         <div className="headerSearchOptions" ref={optionsRef}>
             <OptionsItem type='Guests' options={options} minLimit={1} handleactions={handleactions} />
