@@ -6,6 +6,7 @@ import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
 import useOutsideClick from '../../hook/useOutsideClick';
 import HotelsHomeList from '../HotelsHomeList/HotelsHomeList';
+import { createSearchParams, useNavigate } from 'react-router-dom';
 
 function Home() {
     return (
@@ -53,9 +54,18 @@ function HeaderSearch() {
         }
     }
 
-
+    const navigate = useNavigate();
     const handleSearch = () => {
+        const codedParams = createSearchParams({
+            destination,
+            options: JSON.stringify(options),
+            date: JSON.stringify(date)
+        });
 
+        navigate({
+            pathname: 'hotels',
+            search: codedParams.toString()
+        })
     }
 
     return (
