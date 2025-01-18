@@ -4,6 +4,7 @@ import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
+import useOutsideClick from '../../hook/useOutsideClick';
 
 function Home() {
     const [small, setSmall] = useState(false);
@@ -115,10 +116,11 @@ function HeaderSearch() {
                 </div>
                 <div className="headerSearchItem">
                     <label>Options :</label>
-                    {isOptinsOpen && <HeaderSearchOptions options={options} handleactions={handleactions} />}
+                    {isOptinsOpen && <HeaderSearchOptions options={options} handleactions={handleactions} setIsOptionsOpen={setIsOptionsOpen} />}
                     <div
                         id='dropDownOptins'
                         onClick={() => setIsOptionsOpen(is => !is)}
+
                     >1 adult &bull; 2 children &bull; 1 room</div>
                 </div>
                 <button className='btn btnSearchHeader'>
@@ -129,9 +131,11 @@ function HeaderSearch() {
     )
 }
 
-function HeaderSearchOptions({ options, handleactions }) {
+function HeaderSearchOptions({ options, handleactions, setIsOptionsOpen }) {
+    const optionsRef = useRef()
+    useOutsideClick(optionsRef, 'dropDownOptins',() => setIsOptionsOpen(false))
     return (
-        <div className="headerSearchOptions">
+        <div className="headerSearchOptions" ref={optionsRef}>
             <OptionsItem type='Guests' options={options} minLimit={1} handleactions={handleactions} />
             <OptionsItem type='Children' options={options} minLimit={0} handleactions={handleactions} />
             <OptionsItem type='Room' options={options} minLimit={1} handleactions={handleactions} />
