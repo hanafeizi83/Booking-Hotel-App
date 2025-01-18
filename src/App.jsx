@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import AppLayout from './components/AppLayout/AppLayout'
 import HotelsSearchList from './components/HotelsSearchList/HotelsSearchList'
 import SingleHotel from './components/SingleHotel/SingleHotel'
+import HotelLayout from './components/HotelLayout/HotelLayout'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<AppLayout />}>
           <Route index element={<Home />} />
-          <Route path='/hotels' element={<HotelsSearchList />}>
+          <Route path='/hotels' element={<HotelLayout />}>
             <Route index element={<HotelsSearchList />} />
             <Route path=':id' element={<SingleHotel />} />
           </Route>
