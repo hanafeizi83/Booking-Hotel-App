@@ -3,8 +3,6 @@ import useFetch from '../../hook/useFetch'
 
 function HotelsList() {
     const { data, isLoading } = useFetch();
-    console.log(data);
-
     return (
         <div>
             <div className="container">
