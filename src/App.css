@@ -297,7 +297,7 @@
 .map {
   width: 50%;
   overflow: auto;
-  height: 100vh;
+  height: 80vh;
 }
 
 /* hotelsSearch */
@@ -327,9 +327,11 @@
   align-items: flex-end;
   width: 75%;
 }
-.hotelSearchDetail >div{
+
+.hotelSearchDetail>div {
   width: 70%;
 }
+
 .hotelName {
   font-size: 1rem;
   font-weight: 600;
@@ -377,10 +379,31 @@
 }
 
 .priceAndBook button {
-  width: 80%;
-  padding: .5rem 0;
+  width: 100%;
+  padding: .5rem 1rem;
   border-radius: 30px;
   background-color: var(--blue);
   color: var(--white);
   font-size: .8rem;
+}
+
+.hotelsSearch {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.hotelsSearch button {
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.hotelsSearch h2 {
+  margin: .8rem 0;
+  font-family: 'Bollerouy';
+}
+
+.hotelsSearch span {
+  color: var(--gray-700);
+  font-size: 1rem;
+  font-family: 'Bollerouy';
 }
