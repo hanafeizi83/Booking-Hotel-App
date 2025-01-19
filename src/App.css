@@ -1,4 +1,5 @@
 @import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
 .header {
   width: 100%;
   position: fixed;
@@ -234,8 +235,9 @@
   font-size: .8rem;
   margin-right: .5rem;
 }
+
 /* date */
-.date{
+.date {
   position: absolute;
   top: 2.5rem;
   left: -5rem;
@@ -272,7 +274,8 @@
   height: 1.2rem;
   border-radius: 3px;
 }
-.btnCounter{
+
+.btnCounter {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,19 +283,127 @@
 }
 
 /* map */
-.mapCotainer{
+.mapCotainer {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 4rem;
 }
 
-.hotelsContainer{
-  width: 50%;
+.hotelsContainer {
+  width: 60%;
 }
 
-.map{
+.map {
   width: 50%;
   overflow: auto;
-  height: 100vh;
+  height: 80vh;
+}
+
+/* hotelsSearch */
+
+.hotelSearchItem {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: .5rem;
+  justify-content: space-between;
+  box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.10);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.hotelSearchItem img {
+  width: 25%;
+  height: 9rem;
+  border-radius: 7px;
+  margin-right: .5rem;
+}
+
+.hotelSearchDetail {
+  display: flex;
+  align-items: flex-end;
+  width: 75%;
+}
+
+.hotelSearchDetail>div {
+  width: 70%;
+}
+
+.hotelName {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+.hotelLocation {
+  font-size: .8rem;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+.hotelSearchOptions {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotelSearchOptions h3 {
+  font-size: .9rem;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.hotelSearchOptions span {
+  font-size: .8rem;
+  margin-top: .3rem;
+  padding: 0 .3rem;
+}
+
+.priceAndBook {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.priceAndBook h3 {
+  margin: 0;
+}
+
+.priceAndBook p {
+  font-size: .8rem;
+  color: var(--gray-700);
+  margin: .5rem 0;
+}
+
+.priceAndBook button {
+  width: 100%;
+  padding: .5rem 1rem;
+  border-radius: 30px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: .8rem;
+}
+
+.hotelsSearch {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.hotelsSearch button {
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+
+.hotelsSearch h2 {
+  margin: .8rem 0;
+  font-family: 'Bollerouy';
+}
+
+.hotelsSearch span {
+  color: var(--gray-700);
+  font-size: 1rem;
+  font-family: 'Bollerouy';
 }
