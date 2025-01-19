@@ -392,7 +392,7 @@
   margin-top: 1rem;
 }
 
-.hotelsSearch button {
+.btnBack {
   font-size: 1.2rem;
   background-color: transparent;
 }
@@ -406,4 +406,55 @@
   color: var(--gray-700);
   font-size: 1rem;
   font-family: 'Bollerouy';
+}
+
+/* Single Hotel */
+.singleHotel {
+  margin-top: .5rem;
+}
+
+.hotelImage {
+  border-radius: 10px;
+  width: 100%;
+  height: 20rem;
+}
+
+.pictureInsideHotel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pictureInsideHotel img {
+  width: 23%;
+  margin-bottom: .7rem;
+  border-radius: 8px;
+  height: 8rem;
+}
+
+.SingleHotelDetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SingleHotelName h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+.SingleHotelName p {
+  font-size: .9rem;
+  color: var(--gray-300);
+  margin: 0;
+}
+
+.SingleHotelPrice {
+  background-color: var(--blue--300);
+  color: var(--blue);
+  border-radius: 6px;
+  padding: .5rem;
+
 }

@@ -18,7 +18,7 @@ function HotelsSearchList() {
     return (
         <>
             <div className="hotelsSearch">
-                <button className='btn' onClick={() => navigate(-1)}>
+                <button className='btn btnBack' onClick={() => navigate(-1)}>
                     <HiArrowLeft />
                 </button>
                 <h2>Hotels List <span>{geusts} Guests and {room} Room</span> </h2>
@@ -26,7 +26,7 @@ function HotelsSearchList() {
             <div className='hotelsSearchList'>
                 {
                     data.map(item => {
-                        return <div className="hotelSearchItem">
+                        return <div className="hotelSearchItem" key={item.id}>
                             <img src={item.picture_url.url} alt={item.name} />
                             <div className="hotelSearchDetail">
                                 <div>
