@@ -183,6 +183,7 @@
 }
 
 /* hotel List */
+
 .hotelsList {
   display: flex;
   align-items: center;
@@ -190,10 +191,13 @@
   flex-wrap: wrap;
   margin-top: 4rem;
 }
+.hotelsList a{
+  width: 30%;
+}
 
 .hotelItem {
   background-color: var(--white);
-  width: 30%;
+  width: 100%;
   border-radius: 12px;
   padding: .5rem;
   margin-bottom: 1rem;
@@ -307,9 +311,11 @@
   scrollbar-color: var(--blue) var(--bgColor);
   scrollbar-width: thin;
 }
-.map{
+
+.map {
   height: 100vh;
 }
+
 /* hotelsSearch */
 
 .hotelSearchItem {

@@ -53,3 +53,7 @@
   :disabled{
     cursor: no-drop;
   }
+  a{
+    text-decoration: none;
+    color: var(--black);
+  }
