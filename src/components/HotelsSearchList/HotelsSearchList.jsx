@@ -1,20 +1,15 @@
 import React from 'react'
 import { SlLocationPin } from 'react-icons/sl'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
-import useFetch from './../../hook/useFetch'
-import { HiArrowCircleLeft, HiArrowLeft } from 'react-icons/hi';
+import { Link, useNavigate } from 'react-router-dom'
+import { HiArrowLeft } from 'react-icons/hi';
+import { useHotels } from '../../context/HotelsProvider';
+
+
 function HotelsSearchList() {
-    const [searchParams, setSearchParams] = useSearchParams();
-    const destination = searchParams.get('destination');
-    const room = JSON.parse(searchParams.get('options'))?.Room;
-    const geusts = JSON.parse(searchParams.get('options'))?.Guests;
+    const { hotels, isLoading, room, geusts } = useHotels()
     const navigate = useNavigate()
-    const { data, isLoading } = useFetch('http://localhost:5000/hotels',
-        `host_location_like=${destination}&accommodates_gte=${room}&guests_gte=${geusts}`);
 
-    console.log(data);
-
-
+    if (isLoading) return <div>Loading ... </div>
     return (
         <>
             <div className="hotelsSearch">
@@ -25,7 +20,7 @@ function HotelsSearchList() {
             </div>
             <div className='hotelsSearchList'>
                 {
-                    data.map(item => {
+                    hotels.map(item => {
                         return <div className="hotelSearchItem" key={item.id}>
                             <img src={item.picture_url.url} alt={item.name} />
                             <div className="hotelSearchDetail">
