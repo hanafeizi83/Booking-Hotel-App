@@ -16,20 +16,21 @@ function SingleHotel() {
             <button className='btn btnBack' onClick={() => navigate(-1)}>
                 <HiArrowLeft />
             </button>
-            <div className='singleHotel'>
-                <img className='hotelImage' src={findedImage?.image} alt={data?.name} />
-                <div className='pictureInsideHotel'>
-                    {
-                        data?.picture_url?.urls.map(item => {
-                            return <img key={item.id} src={item.image} alt="" onClick={() => setImageId(item.id)} />
-                        })
-                    }
+            {
+                data && <div className='singleHotel'>
+                    <img className='hotelImage' src={data.picture_url.url} alt={data.name} />
+                    <div className='pictureInsideHotel'>
+                        <img src={data.picture_url.img_1} alt="" />
+                        <img src={data.picture_url.img_2} alt="" />
+                        <img src={data.picture_url.img_3} alt="" />
+                        <img src={data.picture_url.img_4} alt="" />
+                    </div>
                 </div>
             </div>
             <div className="SingleHotelDetail">
                 <div className="SingleHotelName">
                     <h2>{data.name}</h2>
-                    <p><SlLocationPin /> {data.host_location}</p>
+                    <p><SlLocationPin /> {data?.host_location}</p>
                 </div>
 
             </div>
