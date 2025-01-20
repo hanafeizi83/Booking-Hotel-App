@@ -40,7 +40,7 @@ function HotelsSearchList() {
                                 <div className='priceAndBook'>
                                     <h3>${item.price}</h3>
                                     <p>1 nights , {item.guests} Geusts</p>
-                                    <Link to={`${item.id}`}>
+                                    <Link to={`${item.id}?lat=${item.latitude}&lng=${item.longitude}`}>
                                         <button className='btn'>See Booking Options</button>
                                     </Link>
                                 </div>
