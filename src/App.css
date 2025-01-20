@@ -431,6 +431,7 @@
   margin-bottom: .7rem;
   border-radius: 8px;
   height: 8rem;
+  cursor: pointer;
 }
 
 .SingleHotelDetail {

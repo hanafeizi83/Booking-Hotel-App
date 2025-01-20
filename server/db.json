@@ -33,9 +33,24 @@
         ],
         "height": 480,
         "url": "https://media.istockphoto.com/id/472899538/photo/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab.jpg?s=612x612&w=0&k=20&c=rz-WSe_6gKfkID6EL9yxCdN_UIMkXUBsr67884j-X9o=",
-        "img_1": "https://www.kayak.co.uk/rimg/himg/ec/90/6b/ice-41394-108516823-172741.jpg?width=836&height=607&crop=true",
-        "img_2": "https://www.kayak.co.uk/rimg/himg/47/f0/fb/expedia_group-41394-11768919-105529.jpg?width=836&height=607&crop=true",
-        "img_3": "https://www.kayak.co.uk/rimg/himg/df/99/c0/ice-41394-108516770-445654.jpg?width=836&height=607&crop=true"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://media.istockphoto.com/id/472899538/photo/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab.jpg?s=612x612&w=0&k=20&c=rz-WSe_6gKfkID6EL9yxCdN_UIMkXUBsr67884j-X9o="
+          },
+          {
+            "id": 2,
+            "image": "https://www.kayak.co.uk/rimg/himg/ec/90/6b/ice-41394-108516823-172741.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 3,
+            "image": "https://www.kayak.co.uk/rimg/himg/df/99/c0/ice-41394-108516770-445654.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 5,
+            "image": "https://www.kayak.co.uk/rimg/himg/32/6a/7f/expedia_group-2094437-247722021-685538.jpg?width=836&height=607&crop=true"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/74942550/415cd752_original.jpg?aki_policy=x_large",
       "host_id": "1195000",
@@ -160,10 +175,24 @@
         ],
         "height": 426,
         "url": "https://media.istockphoto.com/id/503016934/photo/entrance-of-luxury-hotel.jpg?s=612x612&w=0&k=20&c=DXFzucB2xWGf3PI6_yjhLKDvrFcGlOpOjXh6KDI8rqU=",
-        "img_1": "https://www.kayak.co.uk/rimg/himg/c6/5a/57/expedia_group-2094437-5e2c82-382535.jpg?width=836&height=607&crop=true",
-        "img_2": "https://www.kayak.co.uk/rimg/himg/72/e2/f1/expedia_group-2094437-150030515-334209.jpg?width=836&height=607&crop=true",
-        "img_3": "https://www.kayak.co.uk/rimg/himg/cc/f4/c2/expedia_group-2094437-216902153-709556.jpg?width=836&height=607&crop=true",
-        "img_4": "https://www.kayak.co.uk/rimg/himg/32/6a/7f/expedia_group-2094437-247722021-685538.jpg?width=836&height=607&crop=true"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://www.kayak.co.uk/rimg/himg/c6/5a/57/expedia_group-2094437-5e2c82-382535.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 2,
+            "image": "https://www.kayak.co.uk/rimg/himg/ec/90/6b/ice-41394-108516823-172741.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 3,
+            "image": "https://www.kayak.co.uk/rimg/himg/72/e2/f1/expedia_group-2094437-150030515-334209.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 4,
+            "image": "https://www.kayak.co.uk/rimg/himg/cc/f4/c2/expedia_group-2094437-216902153-709556.jpg?width=836&height=607&crop=true"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/eb9e20e1-9c88-43fb-9e0a-e634dfc6e35a.jpg?aki_policy=x_large",
       "host_id": "47820987",
@@ -306,10 +335,24 @@
         ],
         "height": 426,
         "url": "https://www.kayak.co.uk/rimg/himg/80/91/c4/ice-2213287-121369041-830664.jpg?width=836&height=607&crop=true",
-        "img_1": "https://www.kayak.co.uk/rimg/himg/a3/3b/07/ice-2213287-121369013-702353.jpg?width=836&height=607&crop=true",
-        "img_2": "https://www.kayak.co.uk/rimg/himg/69/ff/5a/ice-2213287-121369110-193434.jpg?width=836&height=607&crop=true",
-        "img_3": "https://www.kayak.co.uk/rimg/himg/fb/2b/7f/ice-2213287-121369092-103319.jpg?width=836&height=607&crop=true",
-        "img_4": "https://www.kayak.co.uk/rimg/himg/6c/d6/9f/ice-2213287-121369120-243015.jpg?width=836&height=607&crop=true"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://www.kayak.co.uk/rimg/himg/80/91/c4/ice-2213287-121369041-830664.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 2,
+            "image": "https://www.kayak.co.uk/rimg/himg/a3/3b/07/ice-2213287-121369013-702353.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 3,
+            "image": "https://www.kayak.co.uk/rimg/himg/69/ff/5a/ice-2213287-121369110-193434.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 4,
+            "image": "https://www.kayak.co.uk/rimg/himg/69/ff/5a/ice-2213287-121369110-193434.jpg?width=836&height=607&crop=true"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/10232036/f44402fc_original.jpg?aki_policy=x_large",
       "host_id": "3897376",
@@ -437,10 +480,24 @@
         ],
         "height": 426,
         "url": "https://media.istockphoto.com/id/487042276/photo/hotel-sign.jpg?s=612x612&w=0&k=20&c=DjEVAoFnjB2cWwX28cxSKWkxsbze7o9jgkYrhyfmq9E=",
-        "img_1": "https://www.kayak.co.uk/rimg/kimg/e5/1c/33362f2faeaefcba.jpg?width=836&height=607&crop=true",
-        "img_2": "https://www.kayak.co.uk/rimg/himg/4a/9e/bc/agoda-3558462-814366988-918084.jpg?width=836&height=607&crop=true",
-        "img_3": "https://www.kayak.co.uk/rimg/himg/e1/0d/ef/agoda-3558462-268019450-475005.jpg?width=836&height=607&crop=true",
-        "img_4": "https://www.kayak.co.uk/rimg/himg/21/e0/59/agoda-3558462-814366982-902713.jpg?width=836&height=607&crop=true"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://media.istockphoto.com/id/487042276/photo/hotel-sign.jpg?s=612x612&w=0&k=20&c=DjEVAoFnjB2cWwX28cxSKWkxsbze7o9jgkYrhyfmq9E="
+          },
+          {
+            "id": 2,
+            "image": "https://www.kayak.co.uk/rimg/kimg/e5/1c/33362f2faeaefcba.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 3,
+            "image": "https://www.kayak.co.uk/rimg/himg/4a/9e/bc/agoda-3558462-814366988-918084.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 4,
+            "image": "https://www.kayak.co.uk/rimg/himg/e1/0d/ef/agoda-3558462-268019450-475005.jpg?width=836&height=607&crop=true"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/4aad80ac-8a8f-465d-873c-04c951304180.jpg?aki_policy=x_large",
       "host_id": "17633423",
@@ -583,10 +640,24 @@
         ],
         "height": 480,
         "url": "https://media.istockphoto.com/id/92007666/photo/posh-hotel-front.jpg?s=612x612&w=0&k=20&c=oJ_9x6kG-WO-8t_BIRWE3D4GN6pXLulmf7Lztr4Y-y8=",
-        "img_1": "https://www.kayak.co.uk/rimg/himg/a5/c2/3b/expedia_group-2604754-172e93-286654.jpg?width=836&height=607&crop=true",
-        "img_2": "https://www.kayak.co.uk/rimg/himg/d7/b5/72/expedia_group-2604754-544945-352186.jpg?width=836&height=607&crop=true",
-        "img_3": "https://www.kayak.co.uk/rimg/himg/a7/ba/ab/expedia_group-2604754-242981818-796243.jpg?width=836&height=607&crop=true",
-        "img_4": "https://www.kayak.co.uk/rimg/himg/a6/54/f5/expedia_group-2604754-194699941-450181.jpg?width=836&height=607&crop=true"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://media.istockphoto.com/id/92007666/photo/posh-hotel-front.jpg?s=612x612&w=0&k=20&c=oJ_9x6kG-WO-8t_BIRWE3D4GN6pXLulmf7Lztr4Y-y8="
+          },
+          {
+            "id": 2,
+            "image": "https://www.kayak.co.uk/rimg/himg/a5/c2/3b/expedia_group-2604754-172e93-286654.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 3,
+            "image": "https://www.kayak.co.uk/rimg/himg/d7/b5/72/expedia_group-2604754-544945-352186.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 4,
+            "image": "https://www.kayak.co.uk/rimg/himg/a7/ba/ab/expedia_group-2604754-242981818-796243.jpg?width=836&height=607&crop=true"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/10553335/64dc1cd3_original.jpg?aki_policy=x_large",
       "host_id": "1446698",
@@ -717,10 +788,24 @@
         ],
         "height": 480,
         "url": "https://media.istockphoto.com/id/187363337/photo/modern-hotel-building-in-summer.jpg?s=612x612&w=0&k=20&c=eRVDcadZTKs5t2K-CEeXT6DiJQ68Fnbs6u9F-0S_v8Q=",
-        "img_1": "https://www.kayak.co.uk/rimg/himg/f0/6e/8c/expediav2-243354-49e316-026386.jpg?width=836&height=607&crop=true",
-        "img_2": "https://www.kayak.co.uk/rimg/himg/06/ce/68/expedia_group-243354-202210413-132695.jpg?width=836&height=607&crop=true",
-        "img_3": "https://www.kayak.co.uk/rimg/himg/20/ad/60/expediav2-243354-43f9eb-074641.jpg?width=836&height=607&crop=true",
-        "img_4": "https://www.kayak.co.uk/rimg/himg/30/fd/a0/expediav2-243354-d4113d-102204.jpg?width=836&height=607&crop=true"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://media.istockphoto.com/id/187363337/photo/modern-hotel-building-in-summer.jpg?s=612x612&w=0&k=20&c=eRVDcadZTKs5t2K-CEeXT6DiJQ68Fnbs6u9F-0S_v8Q="
+          },
+          {
+            "id": 2,
+            "image": "https://www.kayak.co.uk/rimg/himg/f0/6e/8c/expediav2-243354-49e316-026386.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 3,
+            "image": "https://www.kayak.co.uk/rimg/himg/06/ce/68/expedia_group-243354-202210413-132695.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 4,
+            "image": "https://www.kayak.co.uk/rimg/himg/20/ad/60/expediav2-243354-43f9eb-074641.jpg?width=836&height=607&crop=true"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/0cfd0182-b3b2-42cf-902f-24cb73a6c82e.jpg?aki_policy=x_large",
       "host_id": "36775877",
@@ -848,10 +933,24 @@
         ],
         "height": 480,
         "url": "https://media.istockphoto.com/id/1273929668/photo/lobby-with-reception-desk-and-lounge-area-with-plants.jpg?s=612x612&w=0&k=20&c=mXWo8Q6jrZB2N6H7yKrSnWZb-RbdvO8TK7Pu0jFZoAY=",
-        "img_1": "https://www.kayak.co.uk/rimg/himg/aa/21/21/expedia_group-2070460-d7b14f-822757.jpg?width=836&height=607&crop=true",
-        "img_2": "https://www.kayak.co.uk/rimg/himg/f8/3f/86/expedia_group-2070460-121033266-724230.jpg?width=836&height=607&crop=true",
-        "img_3": "https://www.kayak.co.uk/rimg/himg/54/96/a2/expedia_group-2070460-d62bf5-860416.jpg?width=836&height=607&crop=true",
-        "img_4": "https://www.kayak.co.uk/rimg/himg/71/4c/93/expedia_group-2070460-165603289-543472.jpg?width=836&height=607&crop=true"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://media.istockphoto.com/id/1273929668/photo/lobby-with-reception-desk-and-lounge-area-with-plants.jpg?s=612x612&w=0&k=20&c=mXWo8Q6jrZB2N6H7yKrSnWZb-RbdvO8TK7Pu0jFZoAY="
+          },
+          {
+            "id": 2,
+            "image": "https://www.kayak.co.uk/rimg/himg/aa/21/21/expedia_group-2070460-d7b14f-822757.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 3,
+            "image": "https://www.kayak.co.uk/rimg/himg/f8/3f/86/expedia_group-2070460-121033266-724230.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 4,
+            "image": "https://www.kayak.co.uk/rimg/himg/54/96/a2/expedia_group-2070460-d62bf5-860416.jpg?width=836&height=607&crop=true"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/fe92d866-4365-4267-b894-0f75511a6d41.jpg?aki_policy=x_large",
       "host_id": "15625753",
@@ -984,10 +1083,24 @@
         ],
         "height": 426,
         "url": "https://media.istockphoto.com/id/612627160/photo/empty-brick-road-nearby-office-building.jpg?s=612x612&w=0&k=20&c=l6T0Mz9wkQ_1KL0jqa-Hz0z8dUa_OQgk7khDPEhZm4I=",
-        "img_1": "https://www.kayak.co.uk/rimg/himg/c4/12/a0/expedia_group-541517-101869117-814601.jpg?width=836&height=607&crop=true",
-        "img_2": "https://www.kayak.co.uk/rimg/himg/bf/67/1e/expedia_group-541517-49405190-839118.jpg?width=836&height=607&crop=true",
-        "img_3": "https://www.kayak.co.uk/rimg/himg/b2/f0/90/expedia_group-541517-247719398-821309.jpg?width=836&height=607&crop=true",
-        "img_4": "https://www.kayak.co.uk/rimg/himg/ff/c5/6c/expedia_group-541517-6a246a-613546.jpg?width=836&height=607&crop=true"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://media.istockphoto.com/id/612627160/photo/empty-brick-road-nearby-office-building.jpg?s=612x612&w=0&k=20&c=l6T0Mz9wkQ_1KL0jqa-Hz0z8dUa_OQgk7khDPEhZm4I="
+          },
+          {
+            "id": 2,
+            "image": "https://www.kayak.co.uk/rimg/himg/c4/12/a0/expedia_group-541517-101869117-814601.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 3,
+            "image": "https://www.kayak.co.uk/rimg/himg/bf/67/1e/expedia_group-541517-49405190-839118.jpg?width=836&height=607&crop=true"
+          },
+          {
+            "id": 4,
+            "image": "https://www.kayak.co.uk/rimg/himg/b2/f0/90/expedia_group-541517-247719398-821309.jpg?width=836&height=607&crop=true"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/440cb88b-6a93-48bc-b87f-78675ea40c60.jpg?aki_policy=x_large",
       "host_id": "14694975",
@@ -1120,10 +1233,24 @@
         ],
         "height": 426,
         "url": "https://media.istockphoto.com/id/149125211/photo/hotel.jpg?s=612x612&w=0&k=20&c=BEdiSt8e05CgtlrtERJgdbbk-7N3Eozw6upl7T0kMi4=",
-        "img_1": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/56/a6/d2/harmony-side-hotel.jpg?w=1400&h=-1&s=1",
-        "img_2": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/56/a6/63/harmony-side-hotel.jpg?w=1400&h=-1&s=1",
-        "img_3": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/ec/12/f5/harmony-side-hotel.jpg?w=1400&h=-1&s=1",
-        "img_4": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/56/a7/09/harmony-side-hotel.jpg?w=1400&h=-1&s=1"
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://media.istockphoto.com/id/149125211/photo/hotel.jpg?s=612x612&w=0&k=20&c=BEdiSt8e05CgtlrtERJgdbbk-7N3Eozw6upl7T0kMi4="
+          },
+          {
+            "id": 2,
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/56/a6/d2/harmony-side-hotel.jpg?w=1400&h=-1&s=1"
+          },
+          {
+            "id": 3,
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/56/a6/63/harmony-side-hotel.jpg?w=1400&h=-1&s=1"
+          },
+          {
+            "id": 4,
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/ec/12/f5/harmony-side-hotel.jpg?w=1400&h=-1&s=1"
+          }
+        ]
       },
       "xl_picture_url": "https://a0.muscache.com/im/pictures/101261468/5be05a66_original.jpg?aki_policy=x_large",
       "host_id": "25049789",
@@ -1264,10 +1391,24 @@
         ],
         "height": 426,
         "url": "https://media.istockphoto.com/id/155375440/photo/singapore-raffles-historic-colonial-landmark.jpg?s=612x612&w=0&k=20&c=kxIggXkXA6MEuWYiandYtOwRG5dUZx5APxPPLHx7nnM=",
-        "img_1":"https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429347962.jpg?k=5dd8c9f1ba16cc983dab7d05051b1940bc07a8c20d6244211c78faf08ec86c35&o=&s=1024x",
-        "img_2":"https://pix8.agoda.net/hotelImages/32942142/-1/c9720434b5426babc5a715c3897e5808.jpg?ce=0&s=1024x",
-        "img_3":"https://pix8.agoda.net/hotelImages/32942142/-1/9843664db781f6501398ec824decf833.jpg?ce=0&s=1024x768",
-        "img_4":"https://q-xx.bstatic.com/xdata/images/hotel/max300/429346977.jpg?k=b3e7b4c6349643e899c95b15965fb07b8500fecab256b6e13c4821334fc7b60b&o="
+        "urls": [
+          {
+            "id": 1,
+            "image": "https://media.istockphoto.com/id/155375440/photo/singapore-raffles-historic-colonial-landmark.jpg?s=612x612&w=0&k=20&c=kxIggXkXA6MEuWYiandYtOwRG5dUZx5APxPPLHx7nnM="
+          },
+          {
+            "id": 2,
+            "image": "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/429347962.jpg?k=5dd8c9f1ba16cc983dab7d05051b1940bc07a8c20d6244211c78faf08ec86c35&o=&s=1024x"
+          },
+          {
+            "id": 3,
+            "image": "https://pix8.agoda.net/hotelImages/32942142/-1/c9720434b5426babc5a715c3897e5808.jpg?ce=0&s=1024x"
+          },
+          {
+            "id": 4,
+            "image": "https://pix8.agoda.net/hotelImages/32942142/-1/9843664db781f6501398ec824decf833.jpg?ce=0&s=1024x768"
+          }
+        ]
       },
       "xl_picture_url": null,
       "host_id": "40565986",
