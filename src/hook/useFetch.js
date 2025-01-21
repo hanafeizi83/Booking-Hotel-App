@@ -20,7 +20,7 @@ export default function useFetch(url, query) {
             }
         }
         FetchData()
-    }, [])
+    }, [url, query])
 
     return { data, isLoading }
 }

@@ -183,6 +183,7 @@
 }
 
 /* hotel List */
+
 .hotelsList {
   display: flex;
   align-items: center;
@@ -191,9 +192,13 @@
   margin-top: 4rem;
 }
 
+.hotelsList a {
+  width: 30%;
+}
+
 .hotelItem {
   background-color: var(--white);
-  width: 30%;
+  width: 100%;
   border-radius: 12px;
   padding: .5rem;
   margin-bottom: 1rem;
@@ -204,6 +209,7 @@
   width: 100%;
   height: 13rem;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .hotelDesc {
@@ -306,9 +312,11 @@
   scrollbar-color: var(--blue) var(--bgColor);
   scrollbar-width: thin;
 }
-.map{
+
+.map {
   height: 100vh;
 }
+
 /* hotelsSearch */
 
 .hotelSearchItem {
@@ -322,6 +330,12 @@
   box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.10);
   margin-bottom: 1rem;
   width: 100%;
+}
+
+.hotelSearchItem.currentHotel {
+  font-style: bold;
+  background-color: var(--gray-50);
+  border: 1px solid var(--blue);
 }
 
 .hotelSearchItem img {
