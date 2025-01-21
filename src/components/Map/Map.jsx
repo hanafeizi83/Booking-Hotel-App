@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import React, { useEffect, useState } from 'react'
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import { useSearchParams } from 'react-router-dom'
+
 function Map({ mapMarker }) {
     const [searchParams, setSearchParams] = useSearchParams();
     const lat = searchParams.get('lat');
     const lng = searchParams.get('lng');
+    const [center, setCenter] = useState([51.505, -0.09]);
 
-    const [center, setCenter] = useState([lat || 51.505, lng || -0.09])
+    useEffect(() => {
+        if (lat, lng) setCenter([lat, lng])
+    }, [lat, lng]);
+
     return (
         <div className='mapKeeper'>
             <MapContainer className='map' center={center} zoom={13} scrollWheelZoom={true}>
@@ -14,11 +19,12 @@ function Map({ mapMarker }) {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
+                <ChangeCenter position={center} />
                 {
                     mapMarker.map(item => {
-                        return <Marker key={item.id} position={[item.latitude || 51.505, item.longitude || -0.09]}>
+                        return <Marker key={item.id} position={[item.latitude, item.longitude]}>
                             <Popup>
-                                A pretty CSS3 popup. <br /> Easily customizable.
+                                {item.host_location}
                             </Popup>
                         </Marker>
                     })
@@ -30,3 +36,9 @@ function Map({ mapMarker }) {
 }
 
 export default Map
+
+function ChangeCenter({ position }) {
+    const map = useMap();
+    map.setView(position)
+    return null;
+}
