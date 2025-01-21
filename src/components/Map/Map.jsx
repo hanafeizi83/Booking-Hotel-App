@@ -16,7 +16,7 @@ function Map({ mapMarker }) {
                 />
                 {
                     mapMarker.map(item => {
-                        return <Marker position={[item.latitude || 51.505, item.longitude || -0.09]}>
+                        return <Marker key={item.id} position={[item.latitude || 51.505, item.longitude || -0.09]}>
                             <Popup>
                                 A pretty CSS3 popup. <br /> Easily customizable.
                             </Popup>

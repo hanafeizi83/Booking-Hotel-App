@@ -8,7 +8,7 @@ import { useHotels } from '../../context/HotelsProvider';
 function HotelsSearchList() {
     const { hotels, isLoading, room, geusts } = useHotels()
     const navigate = useNavigate()
-
+    const { currentHotel } = useHotels();
     if (isLoading) return <div>Loading ... </div>
     return (
         <>
@@ -21,7 +21,7 @@ function HotelsSearchList() {
             <div className='hotelsSearchList'>
                 {
                     hotels.map(item => {
-                        return <div className="hotelSearchItem" key={item.id}>
+                        return <div className={`hotelSearchItem ${currentHotel?.id === item.id ? 'currentHotel' : ''}`} key={item.id}>
                             <img src={item.picture_url.url} alt={item.name} />
                             <div className="hotelSearchDetail">
                                 <div>

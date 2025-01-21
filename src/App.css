@@ -191,7 +191,8 @@
   flex-wrap: wrap;
   margin-top: 4rem;
 }
-.hotelsList a{
+
+.hotelsList a {
   width: 30%;
 }
 
@@ -329,6 +330,12 @@
   box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.10);
   margin-bottom: 1rem;
   width: 100%;
+}
+
+.hotelSearchItem.currentHotel {
+  font-style: bold;
+  background-color: var(--gray-50);
+  border: 1px solid var(--blue);
 }
 
 .hotelSearchItem img {
