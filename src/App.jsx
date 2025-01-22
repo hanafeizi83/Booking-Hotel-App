@@ -10,29 +10,31 @@ import HotelLayout from './components/HotelLayout/HotelLayout'
 import HotelsProvider from './context/HotelsProvider'
 import BookmarkLayout from './components/BookmarkLayout/BookmarkLayout'
 import BookmarksList from './components/BookmarksList/BookmarksList'
+import BookmarkProvider from './context/BookmarkProvider'
 
 function App() {
 
   return (
     <>
-      <HotelsProvider>
-        <Toaster />
-        <Routes>
-          <Route path='/' element={<AppLayout />}>
-            <Route index element={<Home />} />
-            <Route path='/hotels' element={<HotelLayout />}>
-              <Route index element={<HotelsSearchList />} />
-              <Route path=':id' element={<SingleHotel />} />
+      <BookmarkProvider>
+        <HotelsProvider>
+          <Toaster />
+          <Routes>
+            <Route path='/' element={<AppLayout />}>
+              <Route index element={<Home />} />
+              <Route path='/hotels' element={<HotelLayout />}>
+                <Route index element={<HotelsSearchList />} />
+                <Route path=':id' element={<SingleHotel />} />
+              </Route>
+              <Route path='/bookmarks' element={<BookmarkLayout />}>
+                <Route index element={<BookmarksList />} />
+                <Route path=':id' element={<div>single Bookmark</div>} />
+                <Route path='addBookmark' element={<div>Add Bookmark</div>} />
+              </Route>
             </Route>
-            <Route path='/bookmarks' element={<BookmarkLayout />}>
-              <Route index element={<BookmarksList />} />
-              <Route path=':id' element={<div>single Bookmark</div>} />
-              <Route path='addBookmark' element={<div>Add Bookmark</div>} />
-            </Route>
-          </Route>
-        </Routes>
-      </HotelsProvider>
-
+          </Routes>
+        </HotelsProvider>
+      </BookmarkProvider>
     </>
   )
 }

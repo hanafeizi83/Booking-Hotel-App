@@ -3,9 +3,10 @@ import ReactCountryFlag from 'react-country-flag'
 import { SlLocationPin } from 'react-icons/sl'
 import useFetch from '../../hook/useFetch'
 import { Link } from 'react-router-dom';
+import { useBookmark } from '../../context/BookmarkProvider';
 
 function BookmarksList() {
-    const { data: bookmarks, isLoading } = useFetch('http://localhost:5000/bookmarks');
+    const { bookmarks, isLoading } = useBookmark();
     return (
         <div className='bookmarksList'>
             {
