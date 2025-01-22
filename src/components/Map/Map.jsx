@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams } from 'react-router-dom';
 
 function Map({ mapMarker }) {
     const [searchParams, setSearchParams] = useSearchParams();
