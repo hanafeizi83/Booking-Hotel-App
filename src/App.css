@@ -484,5 +484,59 @@
   color: var(--blue);
   border-radius: 6px;
   padding: .5rem;
+}
 
+/* bookmarks */
+.bookmarksList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bookmarksList a {
+  width: 30%;
+}
+
+.bookmarkItem {
+  background-color: var(--white);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.20);
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.bookmarkDetail {
+  width: 100%;
+}
+
+.bookmarkDetail h2 {
+  font-size: .8rem;
+  margin: 0 .8rem;
+}
+
+.bookmarkDetail p {
+  font-size: .7rem;
+  color: var(--gray-700);
+  margin: .5rem .7rem;
+}
+
+.bookmarkDetail button {
+  width: 100%;
+}
+
+.btnRemove {
+  background-color: var(--red);
+  color: var(--white);
+  padding: .4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 0 0 10px 10px;
 }
