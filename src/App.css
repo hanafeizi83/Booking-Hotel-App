@@ -566,3 +566,10 @@
 .bookmardIconLocation{
   margin-right: 5px;
 }
+
+.bookmarkItem.currentBookmark {
+  font-style: bold;
+  background-color: var(--gray-50);
+  border: 1px solid var(--blue);
+  border-bottom: none;
+}
