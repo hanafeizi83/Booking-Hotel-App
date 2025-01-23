@@ -1,7 +1,6 @@
 import { Toaster } from 'react-hot-toast'
 import './App.css'
 import Home from './components/Home/Home'
-import HotelsList from './components/HotelsHomeList/HotelsHomeList'
 import { Route, Routes } from 'react-router-dom'
 import AppLayout from './components/AppLayout/AppLayout'
 import HotelsSearchList from './components/HotelsSearchList/HotelsSearchList'
@@ -11,6 +10,7 @@ import HotelsProvider from './context/HotelsProvider'
 import BookmarkLayout from './components/BookmarkLayout/BookmarkLayout'
 import BookmarksList from './components/BookmarksList/BookmarksList'
 import BookmarkProvider from './context/BookmarkProvider'
+import SingleBookmark from './components/SingleBookmark/SingleBookmark'
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
               </Route>
               <Route path='/bookmarks' element={<BookmarkLayout />}>
                 <Route index element={<BookmarksList />} />
-                <Route path=':id' element={<div>single Bookmark</div>} />
+                <Route path=':id' element={<SingleBookmark />} />
                 <Route path='addBookmark' element={<div>Add Bookmark</div>} />
               </Route>
             </Route>

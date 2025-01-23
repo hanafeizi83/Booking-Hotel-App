@@ -11,7 +11,7 @@ function BookmarksList() {
         <div className='bookmarksList'>
             {
                 bookmarks.map(item => {
-                    return <Link key={item.id} to={`${item.id}`} >
+                    return <Link key={item.id} to={`${item.id}?lat=${item.latitude}&lng=${item.longitude}`} >
                         <div className="bookmarkItem">
                             <ReactCountryFlag svg countryCode={item.countryCode} className='bookmarkFlag' style={{
                                 fontSize: '8rem',

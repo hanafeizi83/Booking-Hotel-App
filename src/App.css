@@ -540,3 +540,29 @@
   justify-content: space-evenly;
   border-radius: 0 0 10px 10px;
 }
+
+/* Single Bookmark */
+.singleHotelItem {
+  display: flex;
+  align-items: center;
+}
+
+.SinglebookmarkFlag {
+  margin-right: .5rem;
+}
+
+.singleBookmarkDetail p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--gray-700);
+}
+
+.singleBookmarkDetail h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+}
+
+.bookmardIconLocation{
+  margin-right: 5px;
+}
