@@ -494,6 +494,14 @@
   flex-wrap: wrap;
 }
 
+.bookmarksListTitle {
+  margin: .8rem 0;
+  font-family: 'Bollerouy';
+}
+.bookmarksListTitle span{
+  color: var(--gray-700);
+  font-family: 'Bollerouy';
+}
 .bookmarksList a {
   width: 30%;
 }
@@ -563,7 +571,7 @@
   margin-bottom: .5rem;
 }
 
-.bookmardIconLocation{
+.bookmardIconLocation {
   margin-right: 5px;
 }
 
