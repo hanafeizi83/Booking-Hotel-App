@@ -6,8 +6,15 @@ import { useBookmark } from '../../context/BookmarkProvider';
 import { HiArrowLeft } from 'react-icons/hi';
 
 function BookmarksList() {
-    const { bookmarks, isLoading, currentBookmark } = useBookmark();
+    const { bookmarks, isLoading, currentBookmark, deleteBookmark } = useBookmark();
     const navigate = useNavigate();
+    
+    const handleDelete =async (e, id) => {
+        e.preventDefault();
+        await deleteBookmark(id)
+    }
+
+    if(!bookmarks) return <p>there is no bookmarked Location</p>
     return (
         <div className="bookmarksListContainer">
             <button className='btn btnBack' onClick={() => navigate(-1)}>
@@ -29,7 +36,7 @@ function BookmarksList() {
                                         <SlLocationPin />
                                         {item.host_location}
                                     </p>
-                                    <button className='btn btnRemove'>Remove</button>
+                                    <button className='btn btnRemove' onClick={(e) => handleDelete(e,item.id)}>Remove</button>
                                 </div>
                             </div>
                         </Link>

@@ -6,9 +6,7 @@ import toast from 'react-hot-toast';
 
 const BookmarkContext = createContext();
 function BookmarkProvider({ children }) {
-    // const { data: bookmarks, isLoading } = useFetch('http://localhost:5000/bookmarks');
     const [currentBookmark, setCurrentBookmark] = useState(null);
-    const [isLoadingCurrBookmark, setIsLoadingCurrBookmark] = useState(false);
     const [isLoading, setIsLoading] = useState(false)
     const [bookmarks, setBookmarks] = useState([])
     useEffect(() => {
@@ -26,14 +24,14 @@ function BookmarkProvider({ children }) {
         FetchData()
     }, [])
     async function getBookmark(id) {
-        setIsLoadingCurrBookmark(true)
+        setIsLoading(true)
         try {
             const { data } = await axios.get(`http://localhost:5000/bookmarks/${id}`);
             setCurrentBookmark(data);
         } catch (error) {
             toast.error(error?.message);
         } finally {
-            setIsLoadingCurrBookmark(false)
+            setIsLoading(false)
         }
     }
     async function createBookmark(newBookmark) {
@@ -44,14 +42,27 @@ function BookmarkProvider({ children }) {
             toast.error(error?.message);
         }
     }
+
+    async function deleteBookmark(id) {
+        setIsLoading(true)
+        try {
+            const { data } = await axios.delete(`http://localhost:5000/bookmarks/${id}`)
+            setBookmarks(prev => prev.filter(item => item.id != id))
+        } catch (error) {
+            toast.error(error?.message)
+        } finally {
+            setIsLoading(false)
+        }
+
+    }
     return (
         <BookmarkContext.Provider value={{
             bookmarks,
             isLoading,
-            isLoadingCurrBookmark,
             currentBookmark,
             getBookmark,
-            createBookmark
+            createBookmark,
+            deleteBookmark
         }}>
             {children}
         </BookmarkContext.Provider>

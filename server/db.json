@@ -1515,76 +1515,40 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Abalessa",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "23.18455079512732",
-      "longitude": "3.795523257510883",
-      "host_location": "Abalessa Algeria",
+      "cityName": "Kerman",
+      "country": "IR",
+      "countryCode": "IR",
+      "host_location": "Kerman IR",
+      "latitude": "30.341005971309798",
+      "longitude": "57.074091939127484",
       "id": 1
     },
     {
-      "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of)",
+      "cityName": "Rasht",
+      "country": "IR",
       "countryCode": "IR",
-      "latitude": "34.32869425037187",
-      "longitude": "46.724183117022086",
-      "host_location": "Mahidasht Iran (Islamic Republic of)",
-      "id": 4
+      "host_location": "Rasht IR",
+      "latitude": "37.16246139274778",
+      "longitude": "49.6569490098032",
+      "id": 2
     },
     {
-      "cityName": "Sanandaj",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "35.31372444726279",
-      "longitude": "47.03114358752335",
-      "host_location": "Sanandaj Iran (Islamic Republic of)",
+      "cityName": "Chinjenje",
+      "country": "AO",
+      "countryCode": "AO",
+      "host_location": "Chinjenje AO",
+      "latitude": "-12.854065936335356",
+      "longitude": "14.91875552593998",
       "id": 5
     },
     {
-      "cityName": "A Dakhla Oasis",
-      "country": "Egypt",
-      "countryCode": "EG",
-      "latitude": "25.02090651422749",
-      "longitude": "29.09059588509316",
-      "host_location": "A Dakhla Oasis Egypt",
-      "id": 7
-    },
-    {
-      "cityName": "Baba Kot",
-      "country": "Pakistan",
-      "countryCode": "PK",
-      "latitude": "28.43528783183169",
-      "longitude": "67.78003711374224",
-      "host_location": "Baba Kot Pakistan",
-      "id": 8
-    },
-    {
-      "cityName": "Bandar Abbas",
-      "country": "IR",
-      "countryCode": "IR",
-      "host_location": "Bandar Abbas IR",
-      "latitude": "27.335707251671366",
-      "longitude": "56.321142961642316",
-      "id": 9
-    },
-    {
-      "cityName": "Hayma’",
-      "country": "OM",
-      "countryCode": "OM",
-      "host_location": "Hayma’ OM",
-      "latitude": "19.827659442818558",
-      "longitude": "57.19549440832453",
-      "id": 10
-    },
-    {
-      "cityName": "Kabul",
-      "country": "AF",
-      "countryCode": "AF",
-      "host_location": "Kabul AF",
-      "latitude": "34.463945284069126",
-      "longitude": "69.1495425030515",
-      "id": 11
+      "cityName": "Paris",
+      "country": "FR",
+      "countryCode": "FR",
+      "host_location": "Paris FR",
+      "latitude": "48.83968162294812",
+      "longitude": "2.4062276987272084",
+      "id": 6
     }
   ]
 }
