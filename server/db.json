@@ -1558,6 +1558,33 @@
       "longitude": "67.78003711374224",
       "host_location": "Baba Kot Pakistan",
       "id": 8
+    },
+    {
+      "cityName": "Bandar Abbas",
+      "country": "IR",
+      "countryCode": "IR",
+      "host_location": "Bandar Abbas IR",
+      "latitude": "27.335707251671366",
+      "longitude": "56.321142961642316",
+      "id": 9
+    },
+    {
+      "cityName": "Hayma’",
+      "country": "OM",
+      "countryCode": "OM",
+      "host_location": "Hayma’ OM",
+      "latitude": "19.827659442818558",
+      "longitude": "57.19549440832453",
+      "id": 10
+    },
+    {
+      "cityName": "Kabul",
+      "country": "AF",
+      "countryCode": "AF",
+      "host_location": "Kabul AF",
+      "latitude": "34.463945284069126",
+      "longitude": "69.1495425030515",
+      "id": 11
     }
   ]
 }

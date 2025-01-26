@@ -603,6 +603,7 @@ form{
 }
 .addNewBookmarkItem {
   width: 100%;
+  margin-bottom: 1rem;
 }
 .addBookmarkIcon{
   font-size: 1.3rem;
@@ -610,7 +611,7 @@ form{
   margin-right: .5rem;
 }
 .addNewBookmarkItem label {
-  font-size: 1rem;
+  font-size: .8rem;
 }
 .addNewBookmarkItem div{
   display: flex;
@@ -619,7 +620,6 @@ form{
 .inputAddLocation{
   height: 2rem;
   border-bottom: 1px solid var(--blue);
-  margin-top: .5rem;
   width: 100%;
 }
 .btnAddLocation{
