@@ -498,10 +498,12 @@
   margin: .8rem 0;
   font-family: 'Bollerouy';
 }
-.bookmarksListTitle span{
+
+.bookmarksListTitle span {
   color: var(--gray-700);
   font-family: 'Bollerouy';
 }
+
 .bookmarksList a {
   width: 30%;
 }
@@ -580,4 +582,51 @@
   background-color: var(--gray-50);
   border: 1px solid var(--blue);
   border-bottom: none;
+}
+
+/* Add New Location */
+.addBookmarkContainer {
+  background-color: var(--white);
+  width: 70%;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.addBookmarkTitle {
+  font-size: 1.2rem;
+  font-family: 'Bollerouy';
+  text-align: center;
+}
+form{
+  width: 80%;
+  margin:  0 auto;
+}
+.addNewBookmarkItem {
+  width: 100%;
+}
+.addBookmarkIcon{
+  font-size: 1.3rem;
+  color: var(--blue);
+  margin-right: .5rem;
+}
+.addNewBookmarkItem label {
+  font-size: 1rem;
+}
+.addNewBookmarkItem div{
+  display: flex;
+  align-items: flex-end;
+}
+.inputAddLocation{
+  height: 2rem;
+  border-bottom: 1px solid var(--blue);
+  margin-top: .5rem;
+  width: 100%;
+}
+.btnAddLocation{
+  margin-top: 1rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 5px;
+  width: 100%;
+  padding: .5rem;
 }
