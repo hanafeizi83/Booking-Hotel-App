@@ -1549,6 +1549,24 @@
       "latitude": "48.83968162294812",
       "longitude": "2.4062276987272084",
       "id": 6
+    },
+    {
+      "cityName": "Forst Kleinschwarzenlohe",
+      "country": "DE",
+      "countryCode": "DE",
+      "host_location": "Forst Kleinschwarzenlohe DE",
+      "latitude": "49.38336938268762",
+      "longitude": "11.138856476153228",
+      "id": 7
+    },
+    {
+      "cityName": "Torvaj",
+      "country": "HU",
+      "countryCode": "HU",
+      "host_location": "Torvaj HU",
+      "latitude": "46.77683420759866",
+      "longitude": "18.049861011123856",
+      "id": 8
     }
   ]
 }

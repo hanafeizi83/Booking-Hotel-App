@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [small, setSmall] = useState(false);
@@ -21,9 +22,9 @@ function Header() {
                     </div>
                     <nav className='menu'>
                         <ul>
-                            <li>Home</li>
-                            <li>Hotels</li>
-                            <li>Bookmarks</li>
+                            <Link to='/'><li>Home</li></Link>
+                            <Link to='/hotels'><li>Hotels</li></Link>
+                            <Link to='/bookmarks'><li>Bookmarks</li></Link>
                         </ul>
                     </nav>
                     <div>

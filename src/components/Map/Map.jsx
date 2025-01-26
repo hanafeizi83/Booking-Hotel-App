@@ -3,9 +3,7 @@ import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from 'rea
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
 function Map({ mapMarker }) {
-    const [searchParams, setSearchParams] = useSearchParams();
-    const lat = searchParams.get('lat');
-    const lng = searchParams.get('lng');
+    const [lat, lng] = useUrlLocation();
     const [center, setCenter] = useState([51.505, -0.09]);
 
     useEffect(() => {
