@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
-import { useSearchParams } from 'react-router-dom';
+import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from 'react-leaflet'
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 function Map({ mapMarker }) {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -19,6 +19,7 @@ function Map({ mapMarker }) {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
+                <DetectedClick />
                 <ChangeCenter position={center} />
                 {
                     mapMarker.map(item => {
@@ -41,4 +42,12 @@ function ChangeCenter({ position }) {
     const map = useMap();
     map.setView(position)
     return null;
+}
+
+function DetectedClick(e) {
+    const navigate = useNavigate()
+    useMapEvent({
+        click: e => navigate(`/bookmarks/addBookmark?lat=${e.latlng.lat}&lng=${e.latlng.lng}`)
+    })
+    return null
 }
