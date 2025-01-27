@@ -1533,15 +1533,6 @@
       "id": 2
     },
     {
-      "cityName": "Chinjenje",
-      "country": "AO",
-      "countryCode": "AO",
-      "host_location": "Chinjenje AO",
-      "latitude": "-12.854065936335356",
-      "longitude": "14.91875552593998",
-      "id": 5
-    },
-    {
       "cityName": "Paris",
       "country": "FR",
       "countryCode": "FR",
@@ -1560,12 +1551,12 @@
       "id": 7
     },
     {
-      "cityName": "Torvaj",
-      "country": "HU",
-      "countryCode": "HU",
-      "host_location": "Torvaj HU",
-      "latitude": "46.77683420759866",
-      "longitude": "18.049861011123856",
+      "cityName": "London",
+      "country": "GB",
+      "countryCode": "GB",
+      "host_location": "London GB",
+      "latitude": "51.49526361034172",
+      "longitude": "-0.12942220651055883",
       "id": 8
     }
   ]
