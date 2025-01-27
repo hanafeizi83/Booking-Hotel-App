@@ -4,7 +4,7 @@ import Map from '../Map/Map';
 import { useBookmark } from '../../context/BookmarkProvider';
 
 function BookmarkLayout() {
-    const {bookmarks , isLoading}=useBookmark();
+    const {bookmarks }=useBookmark();
     return (
         <div className='container'>
             <div className="mapCotainer">

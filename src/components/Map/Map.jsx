@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvent } from 'react-leaflet'
 import { useNavigate, useSearchParams } from 'react-router-dom';
-
+import useUrlLocation from './../../hook/useUrlLocation'
 function Map({ mapMarker }) {
     const [lat, lng] = useUrlLocation();
     const [center, setCenter] = useState([51.505, -0.09]);

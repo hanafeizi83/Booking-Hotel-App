@@ -3,13 +3,14 @@ import { SlLocationPin } from 'react-icons/sl'
 import { Link, useNavigate } from 'react-router-dom'
 import { HiArrowLeft } from 'react-icons/hi';
 import { useHotels } from '../../context/HotelsProvider';
+import Loader from '../Loader/Loader';
 
 
 function HotelsSearchList() {
     const { hotels, isLoading, room, geusts } = useHotels()
     const navigate = useNavigate()
     const { currentHotel } = useHotels();
-    if (isLoading) return <div>Loading ... </div>
+    if (isLoading) return <Loader />
     return (
         <>
             <div className="hotelsSearch">

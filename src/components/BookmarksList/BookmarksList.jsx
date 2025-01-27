@@ -4,17 +4,19 @@ import { SlLocationPin } from 'react-icons/sl'
 import { Link, useNavigate } from 'react-router-dom';
 import { useBookmark } from '../../context/BookmarkProvider';
 import { HiArrowLeft } from 'react-icons/hi';
+import Loader from '../Loader/Loader';
 
 function BookmarksList() {
     const { bookmarks, isLoading, currentBookmark, deleteBookmark } = useBookmark();
     const navigate = useNavigate();
-    
-    const handleDelete =async (e, id) => {
+
+    const handleDelete = async (e, id) => {
         e.preventDefault();
         await deleteBookmark(id)
     }
-
-    if(!bookmarks) return <p>there is no bookmarked Location</p>
+    
+    if (isLoading) return <Loader />
+    if (!bookmarks) return <p>there is no bookmarked Location</p>
     return (
         <div className="bookmarksListContainer">
             <button className='btn btnBack' onClick={() => navigate(-1)}>
@@ -36,7 +38,7 @@ function BookmarksList() {
                                         <SlLocationPin />
                                         {item.host_location}
                                     </p>
-                                    <button className='btn btnRemove' onClick={(e) => handleDelete(e,item.id)}>Remove</button>
+                                    <button className='btn btnRemove' onClick={(e) => handleDelete(e, item.id)}>Remove</button>
                                 </div>
                             </div>
                         </Link>

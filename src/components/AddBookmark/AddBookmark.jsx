@@ -18,6 +18,7 @@ function AddBookmark() {
     const [isLoadingGeoLocation, setIsLoadingGeoLocation] = useState(false)
     const [geoLocationError, setGeoLocationError] = useState(null)
     const { createBookmark } = useBookmark();
+    
     useEffect(() => {
         async function FetchData() {
             setIsLoadingGeoLocation(true)
