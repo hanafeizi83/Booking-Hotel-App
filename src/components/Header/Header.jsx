@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
     const [small, setSmall] = useState(false);
-
+    const navigate = useNavigate();
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () =>
@@ -28,7 +28,7 @@ function Header() {
                         </ul>
                     </nav>
                     <div>
-                        <button className='btn btnSingIn'>Sign in</button>
+                        <button className='btn btnSingIn' onClick={() => navigate('/login')}>Login</button>
                         <button className='btn btnSingUp'>Sign Up</button>
                     </div>
                 </div>

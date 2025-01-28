@@ -12,6 +12,7 @@ import BookmarksList from './components/BookmarksList/BookmarksList'
 import BookmarkProvider from './context/BookmarkProvider'
 import SingleBookmark from './components/SingleBookmark/SingleBookmark'
 import AddBookmark from './components/AddBookmark/AddBookmark'
+import Login from './components/Login/Login'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path='/' element={<AppLayout />}>
               <Route index element={<Home />} />
+              <Route path='/login' element={<Login />} />
               <Route path='/hotels' element={<HotelLayout />}>
                 <Route index element={<HotelsSearchList />} />
                 <Route path=':id' element={<SingleHotel />} />
