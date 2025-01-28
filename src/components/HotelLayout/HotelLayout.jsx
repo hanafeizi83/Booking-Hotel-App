@@ -13,7 +13,6 @@ function HotelLayout() {
                 </div>
                 <Map mapMarker={hotels} />
             </div>
-
         </div>
     )
 }

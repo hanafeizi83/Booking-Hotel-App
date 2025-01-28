@@ -301,6 +301,10 @@
   width: 60%;
 }
 
+.bookmarksContainer {
+  width: 60%;
+}
+
 .mapKeeper {
   width: 31%;
   height: 88vh;
@@ -480,5 +484,163 @@
   color: var(--blue);
   border-radius: 6px;
   padding: .5rem;
+}
 
+/* bookmarks */
+.bookmarksList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.bookmarksListTitle {
+  margin: .8rem 0;
+  font-family: 'Bollerouy';
+}
+
+.bookmarksListTitle span {
+  color: var(--gray-700);
+  font-family: 'Bollerouy';
+}
+
+.bookmarksList a {
+  width: 30%;
+}
+
+.bookmarkItem {
+  background-color: var(--white);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.20);
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.bookmarkDetail {
+  width: 100%;
+}
+
+.bookmarkDetail h2 {
+  font-size: .8rem;
+  margin: 0 .8rem;
+}
+
+.bookmarkDetail p {
+  font-size: .7rem;
+  color: var(--gray-700);
+  margin: .5rem .7rem;
+}
+
+.bookmarkDetail button {
+  width: 100%;
+}
+
+.btnRemove {
+  background-color: var(--red);
+  color: var(--white);
+  padding: .4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Single Bookmark */
+.singleHotelItem {
+  display: flex;
+  align-items: center;
+}
+
+.SinglebookmarkFlag {
+  margin-right: .5rem;
+}
+
+.singleBookmarkDetail p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--gray-700);
+}
+
+.singleBookmarkDetail h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+}
+
+.bookmardIconLocation {
+  margin-right: 5px;
+}
+
+.bookmarkItem.currentBookmark {
+  font-style: bold;
+  background-color: var(--gray-50);
+  border: 1px solid var(--blue);
+  border-bottom: none;
+}
+
+/* Add New Location */
+.addBookmarkContainer {
+  background-color: var(--white);
+  width: 70%;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.addBookmarkTitle {
+  font-size: 1.2rem;
+  font-family: 'Bollerouy';
+  text-align: center;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.addNewBookmarkItem {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.addBookmarkIcon {
+  font-size: 1.3rem;
+  color: var(--blue);
+  margin-right: .5rem;
+}
+
+.addNewBookmarkItem label {
+  font-size: .8rem;
+}
+
+.addNewBookmarkItem div {
+  display: flex;
+  align-items: flex-end;
+}
+
+.inputAddLocation {
+  height: 2rem;
+  border-bottom: 1px solid var(--blue);
+  width: 100%;
+}
+
+.btnAddLocation {
+  margin-top: 1rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: 5px;
+  width: 100%;
+  padding: .5rem;
+}
+
+/* Loader */
+.loadingContainer {
+  display: flex;
+  margin-top: 3rem;
+  color: var(--blue);
 }

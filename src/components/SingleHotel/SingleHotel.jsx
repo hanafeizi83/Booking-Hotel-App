@@ -4,6 +4,7 @@ import { HiArrowLeft } from 'react-icons/hi';
 import { SlLocationPin } from 'react-icons/sl';
 import { useEffect, useState } from 'react';
 import { useHotels } from '../../context/HotelsProvider';
+import Loader from '../Loader/Loader';
 
 function SingleHotel() {
     const { id } = useParams()
@@ -16,7 +17,8 @@ function SingleHotel() {
     useEffect(() => {
         getHotel(id);
     }, [id]);
-
+    
+    if (isLoading) return <Loader />
     if (!currentHotel) return;
     return (
         <>

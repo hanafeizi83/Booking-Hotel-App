@@ -27,7 +27,7 @@ function HotelsProvider({ children }) {
             setCurrentHotel(null)
             toast.error(error?.message)
         } finally {
-            setIsCurrLoading(false)
+            // setIsCurrLoading(false)
         }
     }
 
