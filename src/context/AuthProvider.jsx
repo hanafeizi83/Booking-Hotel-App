@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useReducer } from 'react'
+import toast from 'react-hot-toast';
 
 const AuthContext = createContext();
 const initioalState = {
@@ -16,6 +17,8 @@ function authReducer(state, { type, payload }) {
             user: null,
             isAuthenticated: false
         }
+        default:
+            throw new Error('Unknown action!!')
     }
 }
 const FAKE_USER = {
@@ -30,6 +33,9 @@ export default function AuthProvider({ children }) {
     function login(email, password) {
         if (FAKE_USER.email === email && FAKE_USER.password === password)
             dispatch({ type: 'login', payload: FAKE_USER })
+
+        if (FAKE_USER.email !== email && FAKE_USER.password !== password)
+            toast.error('Enter a  vaild email and password')
     }
 
     function logout() {

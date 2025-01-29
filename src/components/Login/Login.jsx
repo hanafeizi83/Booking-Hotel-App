@@ -15,7 +15,7 @@ function Login() {
     }
 
     useEffect(() => {
-        if (isAuthenticated) navigate('/')
+        if (isAuthenticated) navigate('/', { replace: true })
     }, [isAuthenticated])
     return (
         <div className='login'>

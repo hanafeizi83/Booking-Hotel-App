@@ -14,7 +14,8 @@ function Header() {
         }
     }, []);
     const handleLogOut = () => {
-        logout()
+        logout();
+        navigate('/')
     }
     return (
         <header className={`header ${small ? 'headerBackground' : ''}`} >
