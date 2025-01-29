@@ -618,6 +618,7 @@
   font-size: 1.2rem;
   font-family: 'Bollerouy';
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 form {
@@ -627,13 +628,16 @@ form {
 
 .addNewBookmarkItem {
   width: 100%;
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
+  background-color: #e2e2e2;
+  border-radius: 15px;
 }
 
 .addBookmarkIcon {
   font-size: 1.3rem;
-  color: var(--blue);
-  margin-right: .5rem;
+  margin: 0 .5rem;
 }
 
 .addNewBookmarkItem label {
@@ -647,15 +651,15 @@ form {
 
 .inputAddLocation {
   height: 2rem;
-  border-bottom: 1px solid var(--blue);
   width: 100%;
+  background-color: #e2e2e2;
+  border-radius: 15px;
 }
 
 .btnAddLocation {
-  margin-top: 1rem;
   background-color: var(--blue);
   color: var(--white);
-  border-radius: 5px;
+  border-radius: 15px;
   width: 100%;
   padding: .5rem;
 }

@@ -65,8 +65,8 @@ function AddBookmark() {
                 <h2 className='addBookmarkTitle'>Add New Location</h2>
                 <form onSubmit={handleSubmitForm}>
                     <div className="addNewBookmarkItem">
-                        <label htmlFor="cityName">City Name :</label>
-                        <div>
+                        {/* <label htmlFor="cityName">City Name :</label> */}
+                        
                             <BiMapPin className='addBookmarkIcon' />
                             <input
                                 type="text"
@@ -76,12 +76,12 @@ function AddBookmark() {
                                 value={cityName}
                                 onChange={(e) => setCityName(e.target.value)}
                             />
-                        </div>
+                        
                     </div>
 
                     <div className="addNewBookmarkItem">
-                        <label htmlFor="country">Country :</label>
-                        <div>
+                        {/* <label htmlFor="country">Country :</label> */}
+                        
                             <BiMapAlt className='addBookmarkIcon' />
                             <input
                                 type="text"
@@ -91,7 +91,7 @@ function AddBookmark() {
                                 value={country}
                                 onChange={(e) => setCountry(e.target.value)}
                             />
-                        </div>
+                        
                     </div>
 
                     <button className='btn btnAddLocation'>Add New Location</button>
