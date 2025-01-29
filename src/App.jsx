@@ -13,31 +13,34 @@ import BookmarkProvider from './context/BookmarkProvider'
 import SingleBookmark from './components/SingleBookmark/SingleBookmark'
 import AddBookmark from './components/AddBookmark/AddBookmark'
 import Login from './components/Login/Login'
+import AuthProvider from './context/AuthProvider'
 
 function App() {
 
   return (
     <>
-      <BookmarkProvider>
-        <HotelsProvider>
-          <Toaster />
-          <Routes>
-            <Route path='/' element={<AppLayout />}>
-              <Route index element={<Home />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/hotels' element={<HotelLayout />}>
-                <Route index element={<HotelsSearchList />} />
-                <Route path=':id' element={<SingleHotel />} />
+      <AuthProvider>
+        <BookmarkProvider>
+          <HotelsProvider>
+            <Toaster />
+            <Routes>
+              <Route path='/' element={<AppLayout />}>
+                <Route index element={<Home />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/hotels' element={<HotelLayout />}>
+                  <Route index element={<HotelsSearchList />} />
+                  <Route path=':id' element={<SingleHotel />} />
+                </Route>
+                <Route path='/bookmarks' element={<BookmarkLayout />}>
+                  <Route index element={<BookmarksList />} />
+                  <Route path=':id' element={<SingleBookmark />} />
+                  <Route path='addBookmark' element={<AddBookmark />} />
+                </Route>
               </Route>
-              <Route path='/bookmarks' element={<BookmarkLayout />}>
-                <Route index element={<BookmarksList />} />
-                <Route path=':id' element={<SingleBookmark />} />
-                <Route path='addBookmark' element={<AddBookmark />} />
-              </Route>
-            </Route>
-          </Routes>
-        </HotelsProvider>
-      </BookmarkProvider>
+            </Routes>
+          </HotelsProvider>
+        </BookmarkProvider>
+      </AuthProvider>
     </>
   )
 }
