@@ -59,6 +59,13 @@
   margin: 0;
 }
 
+.btnAndProfile {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .btnSingIn {
   background-color: var(--blue);
   color: var(--white);
@@ -74,6 +81,21 @@
   margin-left: .5rem;
 }
 
+.userProfile {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.userProfile img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.userProfile p {
+  font-family: 'Bollerouy';
+}
 
 .headerCotain {
   background-image: url('../public/images/bg.jpg');
