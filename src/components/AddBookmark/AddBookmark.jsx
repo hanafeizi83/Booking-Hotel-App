@@ -18,7 +18,7 @@ function AddBookmark() {
     const [isLoadingGeoLocation, setIsLoadingGeoLocation] = useState(false)
     const [geoLocationError, setGeoLocationError] = useState(null)
     const { createBookmark } = useBookmark();
-    
+
     useEffect(() => {
         async function FetchData() {
             setIsLoadingGeoLocation(true)
@@ -65,35 +65,28 @@ function AddBookmark() {
                 <h2 className='addBookmarkTitle'>Add New Location</h2>
                 <form onSubmit={handleSubmitForm}>
                     <div className="addNewBookmarkItem">
-                        {/* <label htmlFor="cityName">City Name :</label> */}
-                        
-                            <BiMapPin className='addBookmarkIcon' />
-                            <input
-                                type="text"
-                                name='cityName'
-                                className='inputAddLocation'
-                                placeholder='enter a city name'
-                                value={cityName}
-                                onChange={(e) => setCityName(e.target.value)}
-                            />
-                        
+                        <BiMapPin className='addBookmarkIcon' />
+                        <input
+                            type="text"
+                            name='cityName'
+                            className='inputAddLocation'
+                            placeholder='enter a city name'
+                            value={cityName}
+                            onChange={(e) => setCityName(e.target.value)}
+                        />
                     </div>
 
                     <div className="addNewBookmarkItem">
-                        {/* <label htmlFor="country">Country :</label> */}
-                        
-                            <BiMapAlt className='addBookmarkIcon' />
-                            <input
-                                type="text"
-                                name='country'
-                                className='inputAddLocation'
-                                placeholder='enter a country'
-                                value={country}
-                                onChange={(e) => setCountry(e.target.value)}
-                            />
-                        
+                        <BiMapAlt className='addBookmarkIcon' />
+                        <input
+                            type="text"
+                            name='country'
+                            className='inputAddLocation'
+                            placeholder='enter a country'
+                            value={country}
+                            onChange={(e) => setCountry(e.target.value)}
+                        />
                     </div>
-
                     <button className='btn btnAddLocation'>Add New Location</button>
                 </form>
             </div>

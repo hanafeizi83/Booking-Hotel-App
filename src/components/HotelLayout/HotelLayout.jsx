@@ -8,10 +8,10 @@ function HotelLayout() {
     return (
         <div className='container'>
             <div className="mapCotainer">
+                <Map mapMarker={hotels} />
                 <div className="hotelsContainer">
                     <Outlet />
                 </div>
-                <Map mapMarker={hotels} />
             </div>
         </div>
     )

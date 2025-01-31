@@ -33,7 +33,7 @@ function Header() {
                         </ul>
                     </nav>
                     <div className="btnAndProfile">
-                        <div>
+                        <div className='headerBtns'>
                             <button
                                 className='btn btnSingIn'
                                 style={{

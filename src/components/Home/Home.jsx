@@ -15,7 +15,7 @@ function Home() {
                 <div className="container">
                     <div className="headerCotain">
                         <div className="headerHotelDesc">
-                            <h2>Find your best stay with Serenity Hotel</h2>
+                            <h2>Find your best stay with <span>Serenity Hotel</span> </h2>
                             <p>Find and book your best stay with Serenity Hotel in world</p>
                         </div>
                     </div>
