@@ -59,6 +59,20 @@
   margin: 0;
 }
 
+.btnAndProfile {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .btnSingIn {
   background-color: var(--blue);
   color: var(--white);
@@ -74,6 +88,21 @@
   margin-left: .5rem;
 }
 
+.userProfile {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.userProfile img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.userProfile p {
+  font-family: 'Bollerouy';
+}
 
 .headerCotain {
   background-image: url('../public/images/bg.jpg');
@@ -95,8 +124,12 @@
   margin: 0;
 }
 
+.headerCotain h2 span {
+  font-family: 'Bollerouy';
+}
+
 .headerCotain p {
-  color: var(--gray);
+  color: var(--gray-300);
   text-align: center;
 }
 
@@ -596,6 +629,7 @@
   font-size: 1.2rem;
   font-family: 'Bollerouy';
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 form {
@@ -605,13 +639,16 @@ form {
 
 .addNewBookmarkItem {
   width: 100%;
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
+  background-color: #e2e2e2;
+  border-radius: 15px;
 }
 
 .addBookmarkIcon {
   font-size: 1.3rem;
-  color: var(--blue);
-  margin-right: .5rem;
+  margin: 0 .5rem;
 }
 
 .addNewBookmarkItem label {
@@ -625,15 +662,15 @@ form {
 
 .inputAddLocation {
   height: 2rem;
-  border-bottom: 1px solid var(--blue);
   width: 100%;
+  background-color: #e2e2e2;
+  border-radius: 15px;
 }
 
 .btnAddLocation {
-  margin-top: 1rem;
   background-color: var(--blue);
   color: var(--white);
-  border-radius: 5px;
+  border-radius: 15px;
   width: 100%;
   padding: .5rem;
 }
@@ -643,4 +680,181 @@ form {
   display: flex;
   margin-top: 3rem;
   color: var(--blue);
+}
+
+/* Login */
+.login {
+  /* background: linear-gradient(210deg, rgba(41, 203, 240, 1) 0%, rgba(0, 39, 96, 1) 100%); */
+  width: 100%;
+  height: 92vh;
+  margin-top: 3rem;
+}
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 92vh;
+}
+
+.loginFormContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginFormContainer {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 20rem;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--blue);
+  box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.20);
+}
+
+.loginFormContainer img {
+  width: 40%;
+  height: 15rem;
+}
+
+.loginTitle {
+  font-size: 1.2rem;
+  font-family: 'Bollerouy';
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.loginTitle span {
+  font-family: 'Bollerouy';
+}
+
+.loginformItem {
+  background-color: #e2e2e2;
+  border-radius: 15px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  height: 2rem;
+}
+
+.loginformItem input {
+  height: 1.5rem;
+  background-color: #e2e2e2;
+  width: 86%;
+}
+
+.loginformItem input:focus {
+  background-color: #e2e2e2;
+}
+
+.loginFormBtn {
+  border-radius: 20px;
+  width: 60%;
+  margin: 0 auto;
+  height: 2rem;
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+
+/* responsive */
+
+@media (min-width :1280px) {
+  .btnAndProfile {
+    width: 22%;
+  }
+}
+
+@media (max-width :1024px) {
+  .btnAndProfile {
+    width: 28%;
+  }
+
+  .menu {
+    width: 42%;
+  }
+
+  .headerSearchContainer {
+    left: 7rem;
+    width: 78%;
+  }
+
+  .hotelsList a {
+    width: 48%;
+  }
+
+  .hotelPrice {
+    width: 28%;
+  }
+
+}
+
+@media (max-width :768px) {
+  .headerSearchContainer {
+    border-radius: 20px;
+    width: 50%;
+    top: 16rem;
+    left: 7rem;
+    padding: 1rem 1rem;
+    display: block;
+    height: 13.5rem;
+  }
+
+  .headerSearchItem {
+    margin-bottom: .5rem;
+  }
+
+  .headerSearchItem label:first-child {
+    margin-bottom: .3rem;
+  }
+
+  .iconCalender,
+  .iconLocation {
+    top: 1.5rem;
+  }
+
+  .btnSearchHeader {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  .hotelsList {
+    margin-top: 8rem;
+  }
+
+  .hotelPrice {
+    width: 37%;
+  }
+}
+
+@media (max-width :640px) {
+  .hotelsList a {
+    width: 100%;
+  }
+
+  .headerSearchContainer {
+    width: 55%;
+    left: 5rem;
+  }
+
+  .headerCotain h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .headerCotain p {
+    font-size: .8rem;
+  }
+
+  .hotelPrice {
+    width: 25%;
+  }
+
 }

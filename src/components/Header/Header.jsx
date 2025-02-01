@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthProvider';
 
 function Header() {
     const [small, setSmall] = useState(false);
-
+    const { isAuthenticated, logout, user } = useAuth();
+    const navigate = useNavigate();
     useEffect(() => {
         if (typeof window !== "undefined") {
             window.addEventListener("scroll", () =>
@@ -11,7 +13,10 @@ function Header() {
             );
         }
     }, []);
-
+    const handleLogOut = () => {
+        logout();
+        navigate('/')
+    }
     return (
         <header className={`header ${small ? 'headerBackground' : ''}`} >
             <div className="container">
@@ -27,10 +32,28 @@ function Header() {
                             <Link to='/bookmarks'><li>Bookmarks</li></Link>
                         </ul>
                     </nav>
-                    <div>
-                        <button className='btn btnSingIn'>Sign in</button>
-                        <button className='btn btnSingUp'>Sign Up</button>
+                    <div className="btnAndProfile">
+                        <div className='headerBtns'>
+                            <button
+                                className='btn btnSingIn'
+                                style={{
+                                    display: isAuthenticated ? 'none' : ''
+                                }}
+                                onClick={() => navigate('/login')}
+                            >Login</button>
+                            <button
+                                className='btn btnSingUp'
+                                onClick={handleLogOut}
+                            >Log out</button>
+                        </div>
+                        {
+                            isAuthenticated && <div className="userProfile">
+                                <img src="images/user.jpg" />
+                                <p>{` Hi ${user.name}`}</p>
+                            </div>
+                        }
                     </div>
+
                 </div>
             </div>
         </header>

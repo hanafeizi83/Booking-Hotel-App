@@ -22,7 +22,7 @@ function HotelsHomeList() {
                                         </div>
                                         <div className="hotelPrice">
                                             <p>From</p>
-                                            <h2>$ {hotel.price}</h2>
+                                            <h2>${hotel.price}</h2>
                                         </div>
                                     </div>
                                 </div>
