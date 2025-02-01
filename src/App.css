@@ -43,6 +43,13 @@
   height: 3rem;
 }
 
+.menuResponsive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 72%;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -59,8 +66,14 @@
   margin: 0;
 }
 
+.menuIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
 .btnAndProfile {
-  width: 20%;
+  width: 28%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,6 +105,7 @@
   height: 3rem;
   display: flex;
   align-items: center;
+  width: 90%;
 }
 
 .userProfile img {
@@ -768,17 +782,21 @@ form {
 
 @media (min-width :1280px) {
   .btnAndProfile {
-    width: 22%;
+    width: 26%;
+  }
+
+  .menuResponsive {
+    width: 72%;
   }
 }
 
 @media (max-width :1024px) {
-  .btnAndProfile {
-    width: 28%;
+  .menuResponsive {
+    width: 70%;
   }
 
   .menu {
-    width: 42%;
+    width: 55%;
   }
 
   .headerSearchContainer {
@@ -792,6 +810,14 @@ form {
 
   .hotelPrice {
     width: 28%;
+  }
+
+  .btnAndProfile {
+    width: 40%;
+  }
+
+  .userProfile {
+    width: 78%;
   }
 
 }
@@ -832,9 +858,83 @@ form {
   .hotelPrice {
     width: 37%;
   }
+
+  .btnSingUp {
+    padding: .5rem .5rem;
+  }
+
+  .userProfile {
+    width: 100%;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .menuResponsive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20%;
+    display: none;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu ul {
+    display: block;
+  }
+
+  .menu ul a li {
+    margin: 1rem 0;
+  }
+
+  .btnAndProfile {
+    width: 100%;
+  }
+
+  .headerBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btnSingIn,
+  .btnSingUp {
+    width: 80%;
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+
+  .userProfile {
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .userProfile img {
+    width: 6rem;
+    height: 6rem;
+    margin-top: .7rem;
+  }
+
+  .userProfile p {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width :640px) {
+  .menuResponsive {
+    width: 32%;
+  }
+
   .hotelsList a {
     width: 100%;
   }
