@@ -357,8 +357,8 @@
   height: 88vh;
   margin-left: .5rem;
   position: fixed;
-  left: 46rem;
-  right: 0rem;
+  /* left: 46rem; */
+  right: 7.4rem;
   overflow: scroll;
   scrollbar-color: var(--blue) var(--bgColor);
   scrollbar-width: thin;
@@ -788,6 +788,10 @@ form {
   .menuResponsive {
     width: 72%;
   }
+
+  .mapKeeper {
+    right: 6.3rem;
+  }
 }
 
 @media (max-width :1024px) {
@@ -820,6 +824,40 @@ form {
     width: 78%;
   }
 
+  .hotelSearchItem img {
+    width: 33%;
+    height: 11rem;
+  }
+
+  .hotelSearchDetail {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hotelSearchDetail>div {
+    width: 100%;
+  }
+
+  .hotelName {
+    font-size: .9rem;
+  }
+
+  .hotelLocation {
+    font-size: .7rem;
+  }
+
+  .hotelSearchOptions h3 {
+    font-size: .8rem;
+    margin-top: .5rem;
+  }
+
+  .hotelSearchOptions span {
+    font-size: .7rem;
+  }
+
+  .mapKeeper {
+    right: 4.4rem;
+  }
 }
 
 @media (max-width :768px) {
@@ -928,6 +966,46 @@ form {
   .userProfile p {
     font-size: 1.2rem;
   }
+
+  .mapKeeper {
+    width: 81%;
+    height: 50vh;
+    top: 3rem;
+  }
+
+  .hotelsContainer {
+    width: 100%;
+  }
+
+  .singleHotelKeeper {
+    margin-top: 18rem;
+  }
+
+  .hotelsSearch {
+    margin-top: 18rem;
+  }
+
+  .hotelSearchItem img {
+    height: 13rem;
+  }
+
+  .hotelName {
+    font-size: 1.1rem;
+  }
+
+  .hotelLocation {
+    font-size: .9rem;
+  }
+
+  .hotelSearchOptions h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hotelSearchOptions span {
+    font-size: .8rem;
+  }
+
 }
 
 @media (max-width :640px) {
@@ -957,4 +1035,24 @@ form {
     width: 25%;
   }
 
+  .hotelsSearch h2 {
+    font-size: 1rem;
+  }
+
+  .hotelName {
+    font-size: 1rem;
+  }
+
+  .hotelLocation {
+    font-size: .8rem;
+  }
+
+  .hotelSearchOptions h3 {
+    font-size: .9rem;
+    margin-top: .5rem;
+  }
+
+  .hotelSearchOptions span {
+    font-size: .7rem;
+  }
 }

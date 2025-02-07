@@ -17,31 +17,34 @@ function SingleHotel() {
     useEffect(() => {
         getHotel(id);
     }, [id]);
-    
+
     if (isLoading) return <Loader />
     if (!currentHotel) return;
     return (
         <>
-            <button className='btn btnBack' onClick={() => navigate(-1)}>
-                <HiArrowLeft />
-            </button>
-            <div className='singleHotel'>
-                <img className='hotelImage' src={findedImage?.image} alt={currentHotel?.name} />
-                <div className='pictureInsideHotel'>
-                    {
-                        currentHotel?.picture_url?.urls.map(item => {
-                            return <img key={item.id} src={item.image} alt="" onClick={() => setImageId(item.id)} />
-                        })
-                    }
+            <div className="singleHotelKeeper">
+                <button className='btn btnBack' onClick={() => navigate(-1)}>
+                    <HiArrowLeft />
+                </button>
+                <div className='singleHotel'>
+                    <img className='hotelImage' src={findedImage?.image} alt={currentHotel?.name} />
+                    <div className='pictureInsideHotel'>
+                        {
+                            currentHotel?.picture_url?.urls.map(item => {
+                                return <img key={item.id} src={item.image} alt="" onClick={() => setImageId(item.id)} />
+                            })
+                        }
+                    </div>
                 </div>
-            </div>
-            <div className="SingleHotelDetail">
-                <div className="SingleHotelName">
-                    <h2>{currentHotel.name}</h2>
-                    <p><SlLocationPin /> {currentHotel.host_location}</p>
-                </div>
+                <div className="SingleHotelDetail">
+                    <div className="SingleHotelName">
+                        <h2>{currentHotel.name}</h2>
+                        <p><SlLocationPin /> {currentHotel.host_location}</p>
+                    </div>
 
+                </div>
             </div>
+
         </>
 
     )
