@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { SlLocationPin } from 'react-icons/sl'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { HiArrowLeft } from 'react-icons/hi';
-import { useHotels } from '../../context/HotelsProvider';
 import Loader from '../Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAysncHotels } from '../../features/hotel/hotelSlice';
@@ -13,11 +12,9 @@ function HotelsSearchList() {
     const destination = searchParams.get('destination');
     const room = JSON.parse(searchParams.get('options'))?.Room;
     const guests = JSON.parse(searchParams.get('options'))?.Guests;
-    const { isLoading, hotels } = useSelector(state => state.hotels);
+    const { isLoading, hotels , currentHotel } = useSelector(state => state.hotels);
     const dispatch = useDispatch();
-    const navigate = useNavigate()
-
-    const { currentHotel } = useHotels();
+    const navigate = useNavigate();
 
     useEffect(() => {
         dispatch(getAysncHotels({destination  , room , guests}))

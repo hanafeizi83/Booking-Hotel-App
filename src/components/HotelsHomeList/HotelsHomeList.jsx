@@ -6,8 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getAysncHotels } from '../../features/hotel/hotelSlice';
 
 function HotelsHomeList() {
-    // const { data, isLoading } = useFetch('http://localhost:5000/hotels');
-    const { isLoading, hotels } = useSelector(state => state.hotels);
+    const { isLoading, hotels, currentHotel } = useSelector(state => state.hotels);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -22,7 +21,7 @@ function HotelsHomeList() {
                     {
                         hotels.map(hotel => {
                             return <Link key={hotel.id} to={`hotels/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}`}>
-                                <div className="hotelItem">
+                                <div className={`hotelItem ${currentHotel?.id === hotel.id ? 'currentHotel' : ''}`}>
                                     <img src={hotel.picture_url.url} alt={hotel.name} className='hotelImage' />
                                     <div className="hotelDesc">
                                         <div className="hotelDetails">

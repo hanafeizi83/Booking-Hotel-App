@@ -4,7 +4,8 @@ import axios from "axios";
 const initialState = {
     hotels: [],
     isLoading: false,
-    error: ''
+    error: '',
+    currentHotel: {}
 };
 
 const api = axios.create({
@@ -20,6 +21,15 @@ export const getAysncHotels = createAsyncThunk('hotels/getAysncHotels', async (p
         return rejectWithValue(error.message);
     }
 });
+
+export const getAysncHotel = createAsyncThunk('hotels/getAysncHotel', async (payload, { rejectWithValue }) => {
+    try {
+        const { data } = await api.get(`/hotels/${payload.id}`);
+        return data;
+    } catch (error) {
+        return rejectWithValue(error.message);
+    }
+})
 
 const hotelSlice = createSlice({
     name: 'hotels',
@@ -40,6 +50,21 @@ const hotelSlice = createSlice({
                 state.isLoading = false;
                 state.error = action.payload;
                 state.hotels = [];
+            })
+            .addCase(getAysncHotel.pending, (state, action) => {
+                state.isLoading = true;
+                state.currentHotel = {};
+                state.error = '';
+            })
+            .addCase(getAysncHotel.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.currentHotel = action.payload;
+                state.error = '';
+            })
+            .addCase(getAysncHotel.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.payload;
+                state.currentHotel = {};
             })
     }
 })
