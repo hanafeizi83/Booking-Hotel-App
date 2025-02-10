@@ -20,9 +20,9 @@ function App() {
 
   return (
     <>
-      <AuthProvider>
-        <BookmarkProvider>
-          <HotelsProvider>
+        <AuthProvider>
+          <BookmarkProvider>
+            <HotelsProvider>
             <Toaster />
             <Routes>
               <Route path='/' element={<AppLayout />}>
@@ -42,9 +42,9 @@ function App() {
                 </Route>
               </Route>
             </Routes>
-          </HotelsProvider>
-        </BookmarkProvider>
-      </AuthProvider>
+            </HotelsProvider>
+          </BookmarkProvider>
+        </AuthProvider>
     </>
   )
 }

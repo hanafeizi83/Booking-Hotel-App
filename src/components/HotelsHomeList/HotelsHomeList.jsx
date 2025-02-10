@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useFetch from '../../hook/useFetch'
 import { Link } from 'react-router-dom';
 import Loader from '../Loader/Loader';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAysncHotels } from '../../features/hotel/hotelSlice';
 
 function HotelsHomeList() {
-    const { data, isLoading } = useFetch('http://localhost:5000/hotels');
+    // const { data, isLoading } = useFetch('http://localhost:5000/hotels');
+    const { isLoading, hotels } = useSelector(state => state.hotels);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getAysncHotels());
+    }, []);
+
     if (isLoading) return <Loader />
     return (
         <div>
             <div className="container">
                 <div className='hotelsList'>
                     {
-                        data.map(hotel => {
+                        hotels.map(hotel => {
                             return <Link key={hotel.id} to={`hotels/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}`}>
                                 <div className="hotelItem">
                                     <img src={hotel.picture_url.url} alt={hotel.name} className='hotelImage' />

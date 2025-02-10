@@ -1,15 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SlLocationPin } from 'react-icons/sl'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { HiArrowLeft } from 'react-icons/hi';
 import { useHotels } from '../../context/HotelsProvider';
 import Loader from '../Loader/Loader';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAysncHotels } from '../../features/hotel/hotelSlice';
 
 
 function HotelsSearchList() {
-    const { hotels, isLoading, room, geusts } = useHotels()
+    const [searchParams, setSearchParams] = useSearchParams();
+    const destination = searchParams.get('destination');
+    const room = JSON.parse(searchParams.get('options'))?.Room;
+    const guests = JSON.parse(searchParams.get('options'))?.Guests;
+    const { isLoading, hotels } = useSelector(state => state.hotels);
+    const dispatch = useDispatch();
     const navigate = useNavigate()
+
     const { currentHotel } = useHotels();
+
+    useEffect(() => {
+        dispatch(getAysncHotels({destination  , room , guests}))
+    }, [])
+
+
     if (isLoading) return <Loader />
     return (
         <>
@@ -17,7 +31,7 @@ function HotelsSearchList() {
                 <button className='btn btnBack' onClick={() => navigate(-1)}>
                     <HiArrowLeft />
                 </button>
-                <h2>Hotels List <span>{geusts} Guests and {room} Room</span> </h2>
+                <h2>Hotels List <span>{guests} Guests and {room} Room</span> </h2>
             </div>
             <div className='hotelsSearchList'>
                 {
