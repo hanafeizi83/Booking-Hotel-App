@@ -5,6 +5,8 @@ import { HiArrowLeft } from 'react-icons/hi'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useBookmark } from '../../context/BookmarkProvider';
 import useUrlLocation from '../../hook/useUrlLocation';
+import { useDispatch, useSelector } from 'react-redux';
+import { addAysncBookmark } from '../../features/bookmark/bookmarkSlice';
 
 const BASE_LOCATION_URL = 'https://api-bdc.net/data/reverse-geocode-client';
 
@@ -17,7 +19,9 @@ function AddBookmark() {
     const [countryCode, setCountryCode] = useState('');
     const [isLoadingGeoLocation, setIsLoadingGeoLocation] = useState(false)
     const [geoLocationError, setGeoLocationError] = useState(null)
-    const { createBookmark } = useBookmark();
+    // const { createBookmark } = useBookmark();
+    const { isLoading, bookmarks } = useSelector(state => state.bookmarks);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         async function FetchData() {
@@ -53,7 +57,7 @@ function AddBookmark() {
             latitude: lat,
             longitude: lng
         }
-        createBookmark(newBookmark);
+        dispatch(addAysncBookmark(newBookmark))
         navigate('/bookmarks')
     }
     return (

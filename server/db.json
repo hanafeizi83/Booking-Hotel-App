@@ -1522,6 +1522,33 @@
       "latitude": "51.51185467494284",
       "longitude": "-0.09057577252548746",
       "id": 1
+    },
+    {
+      "cityName": "Bazemont",
+      "country": "FR",
+      "countryCode": "FR",
+      "host_location": "Bazemont FR",
+      "latitude": "48.927836740541224",
+      "longitude": "1.8541146864952962",
+      "id": 2
+    },
+    {
+      "cityName": "Chaignay",
+      "country": "FR",
+      "countryCode": "FR",
+      "host_location": "Chaignay FR",
+      "latitude": "47.46360125934305",
+      "longitude": "5.065414551386987",
+      "id": 3
+    },
+    {
+      "cityName": "Tabas",
+      "country": "IR",
+      "countryCode": "IR",
+      "host_location": "Tabas IR",
+      "latitude": "33.220288254900375",
+      "longitude": "55.76497971532617",
+      "id": 4
     }
   ]
 }

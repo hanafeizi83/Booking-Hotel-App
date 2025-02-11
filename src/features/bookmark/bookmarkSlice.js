@@ -40,6 +40,15 @@ export const deleteAysncBookmark = createAsyncThunk('bookmarks/deleteAysncBookma
 
 })
 
+export const addAysncBookmark = createAsyncThunk('bookmarks/addAysncBookmark', async (payload, { rejectWithValue }) => {
+    try {
+        const { data } = await api.post('/bookmarks', payload);
+        return data;
+    } catch (error) {
+        return rejectWithValue(error.message)
+    }
+})
+
 const bookmarkSlice = createSlice({
     name: 'bookmarks',
     initialState,
@@ -77,7 +86,6 @@ const bookmarkSlice = createSlice({
             })
             .addCase(deleteAysncBookmark.pending, (state, action) => {
                 state.isLoading = true;
-                // state.bookmarks = [];
                 state.error = '';
             })
             .addCase(deleteAysncBookmark.fulfilled, (state, action) => {
@@ -85,6 +93,20 @@ const bookmarkSlice = createSlice({
                 state.bookmarks = [...state.bookmarks.filter(item => item.id != action.payload.id)];
             })
             .addCase(deleteAysncBookmark.rejected, (state, action) => {
+                state.isLoading = false;
+                state.bookmarks = [];
+                state.error = action.payload;
+            })
+            .addCase(addAysncBookmark.pending, (state, action) => {
+                state.isLoading = true;
+                state.error = '';
+            })
+            .addCase(addAysncBookmark.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.bookmarks = [...state.bookmarks, action.payload];
+                state.error = '';
+            })
+            .addCase(addAysncBookmark.rejected, (state, action) => {
                 state.isLoading = false;
                 state.bookmarks = [];
                 state.error = action.payload;
