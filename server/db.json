@@ -1515,40 +1515,13 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Kerman",
-      "country": "IR",
-      "countryCode": "IR",
-      "host_location": "Kerman IR",
-      "latitude": "30.341005971309798",
-      "longitude": "57.074091939127484",
+      "cityName": "London",
+      "country": "GB",
+      "countryCode": "GB",
+      "host_location": "London GB",
+      "latitude": "51.51185467494284",
+      "longitude": "-0.09057577252548746",
       "id": 1
-    },
-    {
-      "cityName": "Rasht",
-      "country": "IR",
-      "countryCode": "IR",
-      "host_location": "Rasht IR",
-      "latitude": "37.16246139274778",
-      "longitude": "49.6569490098032",
-      "id": 2
-    },
-    {
-      "cityName": "Paris",
-      "country": "FR",
-      "countryCode": "FR",
-      "host_location": "Paris FR",
-      "latitude": "48.83968162294812",
-      "longitude": "2.4062276987272084",
-      "id": 6
-    },
-    {
-      "cityName": "Forst Kleinschwarzenlohe",
-      "country": "DE",
-      "countryCode": "DE",
-      "host_location": "Forst Kleinschwarzenlohe DE",
-      "latitude": "49.38336938268762",
-      "longitude": "11.138856476153228",
-      "id": 7
     }
   ]
 }

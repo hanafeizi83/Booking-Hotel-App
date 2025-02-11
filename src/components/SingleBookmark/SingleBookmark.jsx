@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import useFetch from '../../hook/useFetch';
 import { HiArrowLeft } from 'react-icons/hi';
 import ReactCountryFlag from 'react-country-flag';
 import { SlLocationPin } from 'react-icons/sl';
-import { useBookmark } from './../../context/BookmarkProvider'
+import { useDispatch, useSelector } from 'react-redux';
+import { getAysncBookmark } from '../../features/bookmark/bookmarkSlice';
+
+
 function SingleBookmark() {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { currentBookmark, getBookmark } = useBookmark()
+    const { currentBookmark } = useSelector(state => state.bookmarks);
+    const dispatch = useDispatch();
     useEffect(() => {
-        getBookmark(id)
+        dispatch(getAysncBookmark({ id }))
     }, [id]);
 
     if (!currentBookmark) return;

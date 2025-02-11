@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import Map from '../Map/Map';
-import { useBookmark } from '../../context/BookmarkProvider';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAysncBookmarks } from '../../features/bookmark/bookmarkSlice';
 
 function BookmarkLayout() {
-    const {bookmarks }=useBookmark();
+    const { bookmarks } = useSelector(state => state.bookmarks);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getAysncBookmarks())
+    }, [])
     return (
         <div className='container'>
             <div className="mapCotainer">
