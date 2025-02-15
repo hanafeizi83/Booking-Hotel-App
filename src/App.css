@@ -858,6 +858,10 @@ form {
   .mapKeeper {
     right: 4.4rem;
   }
+
+  .bookmarksList a {
+    width: 40%;
+  }
 }
 
 @media (max-width :768px) {
@@ -1006,6 +1010,22 @@ form {
     font-size: .8rem;
   }
 
+  .bookmarksContainer {
+    width: 100%;
+    margin-top: 18rem;
+  }
+
+  .bookmarksList a {
+    width: 29%;
+  }
+
+  .bookmarkDetail h2 {
+    font-size: 1rem;
+  }
+
+  .bookmarkDetail p {
+    font-size: .8rem;
+  }
 }
 
 @media (max-width :640px) {
@@ -1055,4 +1075,9 @@ form {
   .hotelSearchOptions span {
     font-size: .7rem;
   }
+
+  .bookmarksList a {
+    width: 48%;
+  }
+
 }

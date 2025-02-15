@@ -2,16 +2,20 @@ import React, { useEffect, useState } from 'react'
 import { AiOutlineLock, AiOutlineMail } from "react-icons/ai";
 import { useAuth } from '../../context/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../features/auth/authSlice';
 
 function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const { user, isAuthenticated, login } = useAuth();
+    // const { user, isAuthenticated, login } = useAuth();
+    const { isAuthenticated, user } = useSelector(state => state.auth);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (email && password) login(email, password);
+        if (email && password) dispatch(login({email, password }));
     }
 
     useEffect(() => {

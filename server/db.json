@@ -1549,6 +1549,15 @@
       "latitude": "33.220288254900375",
       "longitude": "55.76497971532617",
       "id": 4
+    },
+    {
+      "cityName": "Nadarzyn",
+      "country": "PL",
+      "countryCode": "PL",
+      "host_location": "Nadarzyn PL",
+      "latitude": "52.07969139263705",
+      "longitude": "20.82745564311703",
+      "id": 5
     }
   ]
 }
