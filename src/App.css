@@ -862,6 +862,18 @@ form {
   .bookmarksList a {
     width: 40%;
   }
+
+  .addBookmarkContainer {
+    width: 99%;
+  }
+
+  .addBookmarkContainer form {
+    width: 90%;
+  }
+
+  .loginFormContainer {
+    width: 85%;
+  }
 }
 
 @media (max-width :768px) {
@@ -1025,6 +1037,18 @@ form {
 
   .bookmarkDetail p {
     font-size: .8rem;
+  }
+
+  .loginFormContainer {
+    width: 100%;
+  }
+
+  .loginformItem {
+    width: 90%;
+  }
+
+  .loginFormBtn {
+    width: 90%;
   }
 }
 
