@@ -1515,40 +1515,67 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Kerman",
-      "country": "IR",
-      "countryCode": "IR",
-      "host_location": "Kerman IR",
-      "latitude": "30.341005971309798",
-      "longitude": "57.074091939127484",
+      "cityName": "London",
+      "country": "GB",
+      "countryCode": "GB",
+      "host_location": "London GB",
+      "latitude": "51.51185467494284",
+      "longitude": "-0.09057577252548746",
       "id": 1
     },
     {
-      "cityName": "Rasht",
-      "country": "IR",
-      "countryCode": "IR",
-      "host_location": "Rasht IR",
-      "latitude": "37.16246139274778",
-      "longitude": "49.6569490098032",
+      "cityName": "Bazemont",
+      "country": "FR",
+      "countryCode": "FR",
+      "host_location": "Bazemont FR",
+      "latitude": "48.927836740541224",
+      "longitude": "1.8541146864952962",
       "id": 2
     },
     {
-      "cityName": "Paris",
-      "country": "FR",
-      "countryCode": "FR",
-      "host_location": "Paris FR",
-      "latitude": "48.83968162294812",
-      "longitude": "2.4062276987272084",
+      "cityName": "Tabas",
+      "country": "IR",
+      "countryCode": "IR",
+      "host_location": "Tabas IR",
+      "latitude": "33.220288254900375",
+      "longitude": "55.76497971532617",
+      "id": 4
+    },
+    {
+      "cityName": "Nadarzyn",
+      "country": "PL",
+      "countryCode": "PL",
+      "host_location": "Nadarzyn PL",
+      "latitude": "52.07969139263705",
+      "longitude": "20.82745564311703",
+      "id": 5
+    },
+    {
+      "cityName": "Tarinkot",
+      "country": "AF",
+      "countryCode": "AF",
+      "host_location": "Tarinkot AF",
+      "latitude": "32.57195255414346",
+      "longitude": "66.07481201961149",
       "id": 6
     },
     {
-      "cityName": "Forst Kleinschwarzenlohe",
-      "country": "DE",
-      "countryCode": "DE",
-      "host_location": "Forst Kleinschwarzenlohe DE",
-      "latitude": "49.38336938268762",
-      "longitude": "11.138856476153228",
+      "cityName": "Dhamtari",
+      "country": "IN",
+      "countryCode": "IN",
+      "host_location": "Dhamtari IN",
+      "latitude": "20.667256936183474",
+      "longitude": "81.53965207319636",
       "id": 7
+    },
+    {
+      "cityName": "Al Aqţa‘",
+      "country": "YE",
+      "countryCode": "YE",
+      "host_location": "Al Aqţa‘ YE",
+      "latitude": "38.82259097617713",
+      "longitude": "35.442407772979564",
+      "id": 8
     }
   ]
 }

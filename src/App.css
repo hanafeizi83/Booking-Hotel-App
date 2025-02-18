@@ -43,6 +43,13 @@
   height: 3rem;
 }
 
+.menuResponsive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 72%;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -59,8 +66,14 @@
   margin: 0;
 }
 
+.menuIcon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
 .btnAndProfile {
-  width: 20%;
+  width: 28%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,6 +105,7 @@
   height: 3rem;
   display: flex;
   align-items: center;
+  width: 90%;
 }
 
 .userProfile img {
@@ -343,8 +357,8 @@
   height: 88vh;
   margin-left: .5rem;
   position: fixed;
-  left: 46rem;
-  right: 0rem;
+  /* left: 46rem; */
+  right: 7.4rem;
   overflow: scroll;
   scrollbar-color: var(--blue) var(--bgColor);
   scrollbar-width: thin;
@@ -768,17 +782,25 @@ form {
 
 @media (min-width :1280px) {
   .btnAndProfile {
-    width: 22%;
+    width: 26%;
+  }
+
+  .menuResponsive {
+    width: 72%;
+  }
+
+  .mapKeeper {
+    right: 6.3rem;
   }
 }
 
 @media (max-width :1024px) {
-  .btnAndProfile {
-    width: 28%;
+  .menuResponsive {
+    width: 70%;
   }
 
   .menu {
-    width: 42%;
+    width: 55%;
   }
 
   .headerSearchContainer {
@@ -794,6 +816,64 @@ form {
     width: 28%;
   }
 
+  .btnAndProfile {
+    width: 40%;
+  }
+
+  .userProfile {
+    width: 78%;
+  }
+
+  .hotelSearchItem img {
+    width: 33%;
+    height: 11rem;
+  }
+
+  .hotelSearchDetail {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hotelSearchDetail>div {
+    width: 100%;
+  }
+
+  .hotelName {
+    font-size: .9rem;
+  }
+
+  .hotelLocation {
+    font-size: .7rem;
+  }
+
+  .hotelSearchOptions h3 {
+    font-size: .8rem;
+    margin-top: .5rem;
+  }
+
+  .hotelSearchOptions span {
+    font-size: .7rem;
+  }
+
+  .mapKeeper {
+    right: 4.4rem;
+  }
+
+  .bookmarksList a {
+    width: 40%;
+  }
+
+  .addBookmarkContainer {
+    width: 99%;
+  }
+
+  .addBookmarkContainer form {
+    width: 90%;
+  }
+
+  .loginFormContainer {
+    width: 85%;
+  }
 }
 
 @media (max-width :768px) {
@@ -832,9 +912,151 @@ form {
   .hotelPrice {
     width: 37%;
   }
+
+  .btnSingUp {
+    padding: .5rem .5rem;
+  }
+
+  .userProfile {
+    width: 100%;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .menuResponsive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20%;
+    display: none;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu ul {
+    display: block;
+  }
+
+  .menu ul a li {
+    margin: 1rem 0;
+  }
+
+  .btnAndProfile {
+    width: 100%;
+  }
+
+  .headerBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btnSingIn,
+  .btnSingUp {
+    width: 80%;
+    margin: 0;
+    margin-bottom: .5rem;
+  }
+
+  .userProfile {
+    position: absolute;
+    top: 0;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .userProfile img {
+    width: 6rem;
+    height: 6rem;
+    margin-top: .7rem;
+  }
+
+  .userProfile p {
+    font-size: 1.2rem;
+  }
+
+  .mapKeeper {
+    width: 81%;
+    height: 50vh;
+    top: 3rem;
+  }
+
+  .hotelsContainer {
+    width: 100%;
+  }
+
+  .singleHotelKeeper {
+    margin-top: 18rem;
+  }
+
+  .hotelsSearch {
+    margin-top: 18rem;
+  }
+
+  .hotelSearchItem img {
+    height: 13rem;
+  }
+
+  .hotelName {
+    font-size: 1.1rem;
+  }
+
+  .hotelLocation {
+    font-size: .9rem;
+  }
+
+  .hotelSearchOptions h3 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hotelSearchOptions span {
+    font-size: .8rem;
+  }
+
+  .bookmarksContainer {
+    width: 100%;
+    margin-top: 18rem;
+  }
+
+  .bookmarksList a {
+    width: 29%;
+  }
+
+  .bookmarkDetail h2 {
+    font-size: 1rem;
+  }
+
+  .bookmarkDetail p {
+    font-size: .8rem;
+  }
+
+  .loginFormContainer {
+    width: 100%;
+  }
+
+  .loginformItem {
+    width: 90%;
+  }
+
+  .loginFormBtn {
+    width: 90%;
+  }
 }
 
 @media (max-width :640px) {
+  .menuResponsive {
+    width: 32%;
+  }
+
   .hotelsList a {
     width: 100%;
   }
@@ -855,6 +1077,31 @@ form {
 
   .hotelPrice {
     width: 25%;
+  }
+
+  .hotelsSearch h2 {
+    font-size: 1rem;
+  }
+
+  .hotelName {
+    font-size: 1rem;
+  }
+
+  .hotelLocation {
+    font-size: .8rem;
+  }
+
+  .hotelSearchOptions h3 {
+    font-size: .9rem;
+    margin-top: .5rem;
+  }
+
+  .hotelSearchOptions span {
+    font-size: .7rem;
+  }
+
+  .bookmarksList a {
+    width: 48%;
   }
 
 }

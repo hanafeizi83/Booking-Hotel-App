@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactCountryFlag from 'react-country-flag'
 import { SlLocationPin } from 'react-icons/sl'
 import { Link, useNavigate } from 'react-router-dom';
-import { useBookmark } from '../../context/BookmarkProvider';
 import { HiArrowLeft } from 'react-icons/hi';
 import Loader from '../Loader/Loader';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteAysncBookmark, getAysncBookmarks } from '../../features/bookmark/bookmarkSlice';
 
 function BookmarksList() {
-    const { bookmarks, isLoading, currentBookmark, deleteBookmark } = useBookmark();
+    const { isLoading, bookmarks, currentBookmark } = useSelector(state => state.bookmarks);
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const handleDelete = async (e, id) => {
+    const handleDelete = (e, id) => {
         e.preventDefault();
-        await deleteBookmark(id)
+        dispatch(deleteAysncBookmark({ id }))
     }
-    
+    useEffect(() => {
+        dispatch(getAysncBookmarks())
+    }, []);
+
     if (isLoading) return <Loader />
     if (!bookmarks) return <p>there is no bookmarked Location</p>
     return (
@@ -30,7 +35,10 @@ function BookmarksList() {
                             <div className={`bookmarkItem ${currentBookmark?.id === item.id ? 'currentBookmark' : ''}`}>
                                 <ReactCountryFlag svg countryCode={item.countryCode} className='bookmarkFlag' style={{
                                     fontSize: '8rem',
-                                    margin: '0 .8rem'
+                                    margin: '0 .8rem',
+                                    '@media (max-width: 1024px)': {
+                                        fontSize: '6rem'
+                                    }
                                 }} />
                                 <div className="bookmarkDetail">
                                     <h2>{item.cityName} - {item.country}</h2>
