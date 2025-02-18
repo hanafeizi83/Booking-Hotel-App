@@ -2,8 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { BiMapAlt, BiMapPin } from 'react-icons/bi';
 import { HiArrowLeft } from 'react-icons/hi'
-import { useNavigate, useSearchParams } from 'react-router-dom'
-import { useBookmark } from '../../context/BookmarkProvider';
+import { useNavigate } from 'react-router-dom'
 import useUrlLocation from '../../hook/useUrlLocation';
 import { useDispatch, useSelector } from 'react-redux';
 import { addAysncBookmark } from '../../features/bookmark/bookmarkSlice';
@@ -19,7 +18,6 @@ function AddBookmark() {
     const [countryCode, setCountryCode] = useState('');
     const [isLoadingGeoLocation, setIsLoadingGeoLocation] = useState(false)
     const [geoLocationError, setGeoLocationError] = useState(null)
-    // const { createBookmark } = useBookmark();
     const { isLoading, bookmarks } = useSelector(state => state.bookmarks);
     const dispatch = useDispatch();
 

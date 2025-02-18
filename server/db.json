@@ -1533,15 +1533,6 @@
       "id": 2
     },
     {
-      "cityName": "Chaignay",
-      "country": "FR",
-      "countryCode": "FR",
-      "host_location": "Chaignay FR",
-      "latitude": "47.46360125934305",
-      "longitude": "5.065414551386987",
-      "id": 3
-    },
-    {
       "cityName": "Tabas",
       "country": "IR",
       "countryCode": "IR",
@@ -1558,6 +1549,33 @@
       "latitude": "52.07969139263705",
       "longitude": "20.82745564311703",
       "id": 5
+    },
+    {
+      "cityName": "Tarinkot",
+      "country": "AF",
+      "countryCode": "AF",
+      "host_location": "Tarinkot AF",
+      "latitude": "32.57195255414346",
+      "longitude": "66.07481201961149",
+      "id": 6
+    },
+    {
+      "cityName": "Dhamtari",
+      "country": "IN",
+      "countryCode": "IN",
+      "host_location": "Dhamtari IN",
+      "latitude": "20.667256936183474",
+      "longitude": "81.53965207319636",
+      "id": 7
+    },
+    {
+      "cityName": "Al Aqţa‘",
+      "country": "YE",
+      "countryCode": "YE",
+      "host_location": "Al Aqţa‘ YE",
+      "latitude": "38.82259097617713",
+      "longitude": "35.442407772979564",
+      "id": 8
     }
   ]
 }

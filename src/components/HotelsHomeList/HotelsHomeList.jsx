@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import useFetch from '../../hook/useFetch'
 import { Link } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';

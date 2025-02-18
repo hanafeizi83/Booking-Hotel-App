@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthProvider';
 import { AiOutlineMenu } from "react-icons/ai";
 import useOutsideClick from '../../hook/useOutsideClick';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,7 +7,6 @@ import { logout } from '../../features/auth/authSlice';
 
 function Header() {
     const [small, setSmall] = useState(false);
-    // const { isAuthenticated, logout, user } = useAuth();
     const { isAuthenticated, user } = useSelector(state => state.auth);
     const dispatch = useDispatch();
     const [isOpen, setIsOpen] = useState(false);

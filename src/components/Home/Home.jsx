@@ -51,6 +51,13 @@ function HeaderSearch() {
                     [type]: options[type] + 1
                 }
             })
+        } else if (operator === 'dec') {
+            setOptions(prev => {
+                return {
+                    ...prev,
+                    [type]: options[type] - 1
+                }
+            })
         }
     }
 
@@ -99,18 +106,18 @@ function HeaderSearch() {
                             onChange={item => setDate([item.selection])}
                             minDate={new Date()}
                             moveRangeOnFirstSelection={true}
+                            style={{ zIndex: '100' }}
                         />}
                 </div>
                 <div className="headerSearchItem">
-                    <label>Options :</label>
+                    <label style={{ zIndex: '-3' }}>Options :</label>
                     {isOptinsOpen && <HeaderSearchOptions options={options} handleactions={handleactions} setIsOptionsOpen={setIsOptionsOpen} />}
                     <div
                         id='dropDownOptins'
                         onClick={() => setIsOptionsOpen(is => !is)}
-
                     >1 adult &bull; 2 children &bull; 1 room</div>
                 </div>
-                <button className='btn btnSearchHeader' onClick={handleSearch}>
+                <button className='btn btnSearchHeader' onClick={handleSearch} style={{ zIndex: '-4' }}>
                     <HiSearch className='searchicon' />
                 </button>
             </div>

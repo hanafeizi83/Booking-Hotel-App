@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import ReactCountryFlag from 'react-country-flag'
 import { SlLocationPin } from 'react-icons/sl'
 import { Link, useNavigate } from 'react-router-dom';
-import { useBookmark } from '../../context/BookmarkProvider';
 import { HiArrowLeft } from 'react-icons/hi';
 import Loader from '../Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
